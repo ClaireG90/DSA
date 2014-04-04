@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EntitiesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+      <Schema Namespace="EntitiesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="EntitiesModelStoreContainer">
           <EntitySet Name="Account" EntityType="EntitiesModel.Store.Account" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Category" EntityType="EntitiesModel.Store.Category" store:Type="Tables" Schema="dbo" />
@@ -442,7 +442,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EntitiesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-        <EntityContainer Name="Entitie" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Account" EntityType="EntitiesModel.Account" />
           <EntitySet Name="Category" EntityType="EntitiesModel.Category" />
           <EntitySet Name="Comment" EntityType="EntitiesModel.Comment" />
@@ -878,94 +878,154 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EntitiesModelStoreContainer" CdmEntityContainer="Entitie">
-          <EntitySetMapping Name="Account"><EntityTypeMapping TypeName="EntitiesModel.Account"><MappingFragment StoreEntitySet="Account">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Username" ColumnName="Username" />
-            <ScalarProperty Name="Password" ColumnName="Password" />
-            <ScalarProperty Name="PIN" ColumnName="PIN" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Category"><EntityTypeMapping TypeName="EntitiesModel.Category"><MappingFragment StoreEntitySet="Category">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Comment"><EntityTypeMapping TypeName="EntitiesModel.Comment"><MappingFragment StoreEntitySet="Comment">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-            <ScalarProperty Name="Comment1" ColumnName="Comment" />
-            <ScalarProperty Name="AccountID" ColumnName="AccountID" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Country"><EntityTypeMapping TypeName="EntitiesModel.Country"><MappingFragment StoreEntitySet="Country">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Fault"><EntityTypeMapping TypeName="EntitiesModel.Fault"><MappingFragment StoreEntitySet="Fault">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
-            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-            <ScalarProperty Name="AccountID" ColumnName="AccountID" />
-            <ScalarProperty Name="Barcode" ColumnName="Barcode" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="FaultLog"><EntityTypeMapping TypeName="EntitiesModel.FaultLog"><MappingFragment StoreEntitySet="FaultLog">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="FaultID" ColumnName="FaultID" />
-            <ScalarProperty Name="StatusID" ColumnName="StatusID" />
-            <ScalarProperty Name="Description" ColumnName="Description" />
-            <ScalarProperty Name="DateOfReport" ColumnName="DateOfReport" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="FaultStatus"><EntityTypeMapping TypeName="EntitiesModel.FaultStatus"><MappingFragment StoreEntitySet="FaultStatus">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Order"><EntityTypeMapping TypeName="EntitiesModel.Order"><MappingFragment StoreEntitySet="Order">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="DateOfOrder" ColumnName="DateOfOrder" />
-            <ScalarProperty Name="AccountID" ColumnName="AccountID" />
-            <ScalarProperty Name="StatusID" ColumnName="StatusID" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="OrderStatus"><EntityTypeMapping TypeName="EntitiesModel.OrderStatus"><MappingFragment StoreEntitySet="OrderStatus">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Product"><EntityTypeMapping TypeName="EntitiesModel.Product"><MappingFragment StoreEntitySet="Product">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-            <ScalarProperty Name="Features" ColumnName="Features" />
-            <ScalarProperty Name="Image" ColumnName="Image" />
-            <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
-            <ScalarProperty Name="Price" ColumnName="Price" />
-            <ScalarProperty Name="DateListed" ColumnName="DateListed" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="ProductOrder"><EntityTypeMapping TypeName="EntitiesModel.ProductOrder"><MappingFragment StoreEntitySet="ProductOrder">
-            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-            <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-            <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Rating"><EntityTypeMapping TypeName="EntitiesModel.Rating"><MappingFragment StoreEntitySet="Rating">
-            <ScalarProperty Name="AccountID" ColumnName="AccountID" />
-            <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-            <ScalarProperty Name="Rating1" ColumnName="Rating" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Role"><EntityTypeMapping TypeName="EntitiesModel.Role"><MappingFragment StoreEntitySet="Role">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Town"><EntityTypeMapping TypeName="EntitiesModel.Town"><MappingFragment StoreEntitySet="Town">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-            <ScalarProperty Name="CountryID" ColumnName="CountryID" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="User"><EntityTypeMapping TypeName="EntitiesModel.User"><MappingFragment StoreEntitySet="User">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="Name" ColumnName="Name" />
-            <ScalarProperty Name="Surname" ColumnName="Surname" />
-            <ScalarProperty Name="Email" ColumnName="Email" />
-            <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-            <ScalarProperty Name="ResidenceName" ColumnName="ResidenceName" />
-            <ScalarProperty Name="StreetName" ColumnName="StreetName" />
-            <ScalarProperty Name="TownID" ColumnName="TownID" />
-            <ScalarProperty Name="AccountID" ColumnName="AccountID" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        <EntityContainerMapping StorageEntityContainer="EntitiesModelStoreContainer" CdmEntityContainer="Entities">
+          <EntitySetMapping Name="Account">
+            <EntityTypeMapping TypeName="EntitiesModel.Account">
+              <MappingFragment StoreEntitySet="Account">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="PIN" ColumnName="PIN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Category">
+            <EntityTypeMapping TypeName="EntitiesModel.Category">
+              <MappingFragment StoreEntitySet="Category">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Comment">
+            <EntityTypeMapping TypeName="EntitiesModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Comment1" ColumnName="Comment" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Country">
+            <EntityTypeMapping TypeName="EntitiesModel.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Fault">
+            <EntityTypeMapping TypeName="EntitiesModel.Fault">
+              <MappingFragment StoreEntitySet="Fault">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FaultLog">
+            <EntityTypeMapping TypeName="EntitiesModel.FaultLog">
+              <MappingFragment StoreEntitySet="FaultLog">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FaultID" ColumnName="FaultID" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="DateOfReport" ColumnName="DateOfReport" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="FaultStatus">
+            <EntityTypeMapping TypeName="EntitiesModel.FaultStatus">
+              <MappingFragment StoreEntitySet="FaultStatus">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="EntitiesModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DateOfOrder" ColumnName="DateOfOrder" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderStatus">
+            <EntityTypeMapping TypeName="EntitiesModel.OrderStatus">
+              <MappingFragment StoreEntitySet="OrderStatus">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Product">
+            <EntityTypeMapping TypeName="EntitiesModel.Product">
+              <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Features" ColumnName="Features" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProductOrder">
+            <EntityTypeMapping TypeName="EntitiesModel.ProductOrder">
+              <MappingFragment StoreEntitySet="ProductOrder">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rating">
+            <EntityTypeMapping TypeName="EntitiesModel.Rating">
+              <MappingFragment StoreEntitySet="Rating">
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="Rating1" ColumnName="Rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Role">
+            <EntityTypeMapping TypeName="EntitiesModel.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Town">
+            <EntityTypeMapping TypeName="EntitiesModel.Town">
+              <MappingFragment StoreEntitySet="Town">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="EntitiesModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="ResidenceName" ColumnName="ResidenceName" />
+                <ScalarProperty Name="StreetName" ColumnName="StreetName" />
+                <ScalarProperty Name="TownID" ColumnName="TownID" />
+                <ScalarProperty Name="AccountID" ColumnName="AccountID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <AssociationSetMapping Name="UserRole" TypeName="EntitiesModel.UserRole" StoreEntitySet="UserRole">
             <EndProperty Name="Account">
               <ScalarProperty Name="ID" ColumnName="AccountID" />

@@ -12,7 +12,7 @@ namespace DataAccess
             : base()
         { }
 
-        public DARole(Entitie entities)
+        public DARole(Entities entities)
             : base(entities)
         { }
 

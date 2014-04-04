@@ -12,7 +12,7 @@ namespace DataAccess
             : base()
         { }
 
-        public DAProduct(Entitie entities)
+        public DAProduct(Entities entities)
             : base(entities)
         { }
 

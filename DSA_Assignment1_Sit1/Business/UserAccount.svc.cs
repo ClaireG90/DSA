@@ -12,7 +12,7 @@ namespace Business
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "UserAccount" in code, svc and config file together.
     public class UserAccount : IUserAccount
     {
-        Entitie entities = new Entitie();
+        Entities entities = new Entities();
 
         public void AddUser(Common.User u, List<int> roles, Common.Account a)
         {

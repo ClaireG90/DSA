@@ -8,12 +8,13 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
@@ -44,32 +45,32 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    public partial class Entitie : ObjectContext
+    public partial class Entities : ObjectContext
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new Entitie object using the connection string found in the 'Entitie' section of the application configuration file.
+        /// Initializes a new Entities object using the connection string found in the 'Entities' section of the application configuration file.
         /// </summary>
-        public Entitie() : base("name=Entitie", "Entitie")
+        public Entities() : base("name=Entities", "Entities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new Entitie object.
+        /// Initialize a new Entities object.
         /// </summary>
-        public Entitie(string connectionString) : base(connectionString, "Entitie")
+        public Entities(string connectionString) : base(connectionString, "Entities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
         }
     
         /// <summary>
-        /// Initialize a new Entitie object.
+        /// Initialize a new Entities object.
         /// </summary>
-        public Entitie(EntityConnection connection) : base(connection, "Entitie")
+        public Entities(EntityConnection connection) : base(connection, "Entities")
         {
             this.ContextOptions.LazyLoadingEnabled = true;
             OnContextCreated();
@@ -326,6 +327,7 @@ namespace Common
         private ObjectSet<User> _User;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -449,11 +451,11 @@ namespace Common
         }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -484,6 +486,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -586,6 +589,7 @@ namespace Common
         partial void OnPINChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -700,6 +704,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -726,6 +731,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -780,6 +786,7 @@ namespace Common
         partial void OnNameChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -806,6 +813,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -836,6 +844,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -938,6 +947,7 @@ namespace Common
         partial void OnAccountIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1018,6 +1028,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1044,6 +1055,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1098,6 +1110,7 @@ namespace Common
         partial void OnNameChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1124,6 +1137,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1156,6 +1170,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1282,6 +1297,7 @@ namespace Common
         partial void OnBarcodeChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1384,6 +1400,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1416,6 +1433,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1542,6 +1560,7 @@ namespace Common
         partial void OnDateOfReportChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1622,6 +1641,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1648,6 +1668,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1702,6 +1723,7 @@ namespace Common
         partial void OnNameChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1728,6 +1750,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1758,6 +1781,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -1860,6 +1884,7 @@ namespace Common
         partial void OnStatusIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -1924,6 +1949,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -1950,6 +1976,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2004,6 +2031,7 @@ namespace Common
         partial void OnNameChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2030,6 +2058,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2066,6 +2095,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2240,6 +2270,7 @@ namespace Common
         partial void OnDateListedChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2370,6 +2401,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2398,6 +2430,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2479,6 +2512,7 @@ namespace Common
         partial void OnQuantityChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2559,6 +2593,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2587,6 +2622,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2668,6 +2704,7 @@ namespace Common
         partial void OnRating1Changed();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2748,6 +2785,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2774,6 +2812,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2828,6 +2867,7 @@ namespace Common
         partial void OnNameChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -2854,6 +2894,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -2882,6 +2923,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -2960,6 +3002,7 @@ namespace Common
         partial void OnCountryIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3024,6 +3067,7 @@ namespace Common
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -3064,6 +3108,7 @@ namespace Common
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -3286,6 +3331,7 @@ namespace Common
         partial void OnAccountIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -3366,8 +3412,10 @@ namespace Common
         }
 
         #endregion
+
     }
 
     #endregion
+
     
 }

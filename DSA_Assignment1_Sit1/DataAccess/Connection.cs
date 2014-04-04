@@ -8,15 +8,15 @@ namespace DataAccess
 {
     public class Connection
     {
-        public Entitie entities;
+        public Entities entities;
 
-        public Connection(Entitie entities)
+        public Connection(Entities entities)
         {
             this.entities = entities;
         }
         public Connection()
         {
-            entities = new Entitie();
+            entities = new Entities();
         }
     }
 }

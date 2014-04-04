@@ -12,7 +12,7 @@ namespace DataAccess
             : base()
         { }
 
-        public DAUser(Entitie entities)
+        public DAUser(Entities entities)
             : base(entities)
         { }
 

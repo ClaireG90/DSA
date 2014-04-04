@@ -21,6 +21,12 @@ namespace DSA_Assignment1_Sit1.Controllers
             return View();
         }
 
+        public ActionResult Login()
+        {
+            return View(new Models.LoginModel());
+        }
+
+        [HttpPost]
         public ActionResult Login(LoginModel model)
         {
             UtilitiesApplication.Encryption encryption = new UtilitiesApplication.Encryption();
