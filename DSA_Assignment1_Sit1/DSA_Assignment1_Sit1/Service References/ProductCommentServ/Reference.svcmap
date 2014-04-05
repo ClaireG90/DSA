@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="e9cf789a-54ca-43bf-8394-c8a49fdf1874" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:12952/ProductComment.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ProductComment.xsd" MetadataType="Schema" ID="3c262920-26b6-43ca-aaab-ade1f361e7b9" SourceId="1" SourceUrl="http://localhost:12952/ProductComment.svc?xsd=xsd0" />
+    <MetadataFile FileName="ProductComment1.xsd" MetadataType="Schema" ID="9a979938-f11e-4fa2-80fa-a2307aabef7f" SourceId="1" SourceUrl="http://localhost:12952/ProductComment.svc?xsd=xsd4" />
+    <MetadataFile FileName="ProductComment.disco" MetadataType="Disco" ID="186e49c4-7e5b-46ba-bd45-26befec0ba5a" SourceId="1" SourceUrl="http://localhost:12952/ProductComment.svc?disco" />
+    <MetadataFile FileName="ProductComment.wsdl" MetadataType="Wsdl" ID="9b9c351a-67dc-4245-ad8e-7277f41341a5" SourceId="1" SourceUrl="http://localhost:12952/ProductComment.svc?wsdl" />
+    <MetadataFile FileName="ProductComment2.xsd" MetadataType="Schema" ID="37f15612-dcf8-40ad-ad9c-9f228dced4b3" SourceId="1" SourceUrl="http://localhost:12952/ProductComment.svc?xsd=xsd3" />
+    <MetadataFile FileName="ProductComment3.xsd" MetadataType="Schema" ID="f3962a15-ab43-4985-9858-2ad6b778ccca" SourceId="1" SourceUrl="http://localhost:12952/ProductComment.svc?xsd=xsd2" />
+    <MetadataFile FileName="ProductComment4.xsd" MetadataType="Schema" ID="a60ae6bb-cc52-4127-b74d-374e09b58722" SourceId="1" SourceUrl="http://localhost:12952/ProductComment.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,14 @@
+﻿@model List<Common.Comment>
+
+<table>
+
+@foreach (var item in Model) {
+    <tr>
+    </tr>
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comment1)
+        </td>
+    </tr>
+}
+</table>

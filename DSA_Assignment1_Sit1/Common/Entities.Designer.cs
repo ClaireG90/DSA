@@ -2081,7 +2081,8 @@ namespace Common
         /// <param name="categoryID">Initial value of the CategoryID property.</param>
         /// <param name="price">Initial value of the Price property.</param>
         /// <param name="dateListed">Initial value of the DateListed property.</param>
-        public static Product CreateProduct(global::System.Int32 id, global::System.String name, global::System.String features, global::System.String image, global::System.Int32 categoryID, global::System.Decimal price, global::System.DateTime dateListed)
+        /// <param name="quantity">Initial value of the Quantity property.</param>
+        public static Product CreateProduct(global::System.Int32 id, global::System.String name, global::System.String features, global::System.String image, global::System.Int32 categoryID, global::System.Decimal price, global::System.DateTime dateListed, global::System.Int32 quantity)
         {
             Product product = new Product();
             product.ID = id;
@@ -2091,6 +2092,7 @@ namespace Common
             product.CategoryID = categoryID;
             product.Price = price;
             product.DateListed = dateListed;
+            product.Quantity = quantity;
             return product;
         }
 
@@ -2268,6 +2270,30 @@ namespace Common
         private global::System.DateTime _DateListed;
         partial void OnDateListedChanging(global::System.DateTime value);
         partial void OnDateListedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 Quantity
+        {
+            get
+            {
+                return _Quantity;
+            }
+            set
+            {
+                OnQuantityChanging(value);
+                ReportPropertyChanging("Quantity");
+                _Quantity = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("Quantity");
+                OnQuantityChanged();
+            }
+        }
+        private global::System.Int32 _Quantity;
+        partial void OnQuantityChanging(global::System.Int32 value);
+        partial void OnQuantityChanged();
 
         #endregion
 

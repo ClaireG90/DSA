@@ -67,12 +67,24 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\ViewAllProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
+    <Compile Include="Models\ViewAllProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ProductCommentServ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProductServ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\UserAccountServ\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -119,13 +131,61 @@
     <Content Include="Scripts\modernizr-1.7.js" />
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <None Include="Properties\DataSources\Common.Account.datasource" />
+    <None Include="Properties\DataSources\Common.Comment.datasource" />
+    <None Include="Properties\DataSources\Common.Product.datasource" />
     <None Include="Properties\DataSources\Common.Role.datasource" />
     <None Include="Properties\DataSources\Common.Town.datasource" />
     <None Include="Properties\DataSources\Common.User.datasource" />
+    <None Include="Service References\ProductCommentServ\ProductComment.wsdl" />
+    <None Include="Service References\ProductCommentServ\ProductComment.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductCommentServ\ProductComment1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductCommentServ\ProductComment2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductCommentServ\ProductComment3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductCommentServ\ProductComment4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductServ\Product.wsdl" />
+    <None Include="Service References\ProductServ\Product.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductServ\Product1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductServ\Product2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductServ\Product3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ProductServ\Product4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\UserAccountServ\UserAccount.disco" />
     <None Include="Service References\UserAccountServ\configuration91.svcinfo" />
     <None Include="Service References\UserAccountServ\configuration.svcinfo" />
     <None Include="Service References\UserAccountServ\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ProductServ\Product.disco" />
+    <None Include="Service References\ProductServ\configuration91.svcinfo" />
+    <None Include="Service References\ProductServ\configuration.svcinfo" />
+    <None Include="Service References\ProductServ\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ProductCommentServ\ProductComment.disco" />
+    <None Include="Service References\ProductCommentServ\configuration91.svcinfo" />
+    <None Include="Service References\ProductCommentServ\configuration.svcinfo" />
+    <None Include="Service References\ProductCommentServ\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -152,7 +212,6 @@
     <Content Include="Views\Account\ChangePasswordSuccess.cshtml" />
     <Content Include="Views\Account\LogOn.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_LogOnPartial.cshtml" />
@@ -180,9 +239,13 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\ViewAllProduct\Index.cshtml" />
+    <Content Include="Views\ViewAllProduct\Details.cshtml" />
+    <Content Include="Views\ViewAllProduct\_comments.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -209,6 +272,8 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ProductCommentServ\" />
+    <WCFMetadataStorage Include="Service References\ProductServ\" />
     <WCFMetadataStorage Include="Service References\UserAccountServ\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

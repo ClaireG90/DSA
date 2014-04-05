@@ -47,6 +47,7 @@
     <Compile Include="DARole.cs" />
     <Compile Include="DATown.cs" />
     <Compile Include="DAUser.cs" />
+    <Compile Include="DAProductComment.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

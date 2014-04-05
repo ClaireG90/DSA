@@ -1,0 +1,80 @@
+﻿@model Common.Product
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>@Html.DisplayFor(model => model.Name)</legend>
+
+    <table>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <img src="@Model.Image" alt = "Product Image" width = "300px" height = "250px" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.Name)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.Features)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Features)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.Price)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Price)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.Quantity)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Quantity)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.DateListed)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.DateListed)
+            </td>
+        </tr>
+        
+    </table>
+</fieldset>
+
+@Ajax.ActionLink("Product Comments", "ProductComments", new { id = Model.ID }, new AjaxOptions
+{
+    HttpMethod = "Get",
+
+    UpdateTargetId = "divComments",
+    InsertionMode = InsertionMode.InsertAfter
+})
+
+<fieldset>
+    <div id="divComments">
+        <legend>Comments</legend>
+    </div>
+</fieldset>
+
+<p>
+    @Html.ActionLink("Back to Products", "Index")
+</p>

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EntitiesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="EntitiesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="EntitiesModelStoreContainer">
           <EntitySet Name="Account" EntityType="EntitiesModel.Store.Account" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Category" EntityType="EntitiesModel.Store.Category" store:Type="Tables" Schema="dbo" />
@@ -177,6 +177,7 @@
           <Property Name="CategoryID" Type="int" Nullable="false" />
           <Property Name="Price" Type="decimal" Nullable="false" Scale="2" />
           <Property Name="DateListed" Type="datetime" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="ProductOrder">
           <Key>
@@ -437,8 +438,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EntitiesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
@@ -632,6 +632,7 @@
           <NavigationProperty Name="Fault" Relationship="EntitiesModel.FK_Fault_Product" FromRole="Product" ToRole="Fault" />
           <NavigationProperty Name="ProductOrder" Relationship="EntitiesModel.FK_ProductOrder_Product" FromRole="Product" ToRole="ProductOrder" />
           <NavigationProperty Name="Rating" Relationship="EntitiesModel.FK_Rating_Product" FromRole="Product" ToRole="Rating" />
+          <Property Type="Int32" Name="Quantity" Nullable="false" />
         </EntityType>
         <EntityType Name="ProductOrder">
           <Key>
@@ -966,6 +967,7 @@
           <EntitySetMapping Name="Product">
             <EntityTypeMapping TypeName="EntitiesModel.Product">
               <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Features" ColumnName="Features" />
