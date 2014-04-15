@@ -13,7 +13,17 @@ namespace DSA_Assignment1_Sit1.Models
 {
     public class ViewAllProductModel
     {
-        public Product product { get; set; }
+        //public Product product { get; set; }
+        public int ID { get; set; }
+        public string name { get; set; }
+        public string features { get; set; }
+        public string image { get; set; }
+        public decimal price { get; set; }
+        public DateTime dateListed { get; set; }
+        public int quantity { get; set; }
+
+        public Product myProduct{get;set;}
+
         public List<Comment> commentList { get; set; }
 
     }

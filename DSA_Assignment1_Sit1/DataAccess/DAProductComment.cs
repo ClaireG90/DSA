@@ -21,5 +21,11 @@ namespace DataAccess
         {
             return entities.Comment.Where(c => c.ProductID == id);
         }
+
+        public void AddComment(Comment comment)
+        {
+            entities.Comment.AddObject(comment);
+            entities.SaveChanges();
+        }
     }
 }

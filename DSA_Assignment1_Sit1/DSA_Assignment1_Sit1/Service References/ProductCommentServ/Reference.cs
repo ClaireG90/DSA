@@ -17,6 +17,9 @@ namespace DSA_Assignment1_Sit1.ProductCommentServ {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductComment/GetCommentsByProductID", ReplyAction="http://tempuri.org/IProductComment/GetCommentsByProductIDResponse")]
         Common.Comment[] GetCommentsByProductID(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IProductComment/AddComment", ReplyAction="http://tempuri.org/IProductComment/AddCommentResponse")]
+        void AddComment(Common.Comment comment);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -48,6 +51,10 @@ namespace DSA_Assignment1_Sit1.ProductCommentServ {
         
         public Common.Comment[] GetCommentsByProductID(int id) {
             return base.Channel.GetCommentsByProductID(id);
+        }
+        
+        public void AddComment(Common.Comment comment) {
+            base.Channel.AddComment(comment);
         }
     }
 }

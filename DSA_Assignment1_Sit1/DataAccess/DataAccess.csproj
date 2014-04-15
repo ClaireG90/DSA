@@ -43,7 +43,12 @@
   <ItemGroup>
     <Compile Include="Connection.cs" />
     <Compile Include="DAAccount.cs" />
+    <Compile Include="DAFault.cs" />
+    <Compile Include="DAFaultLog.cs" />
+    <Compile Include="DAOrder.cs" />
+    <Compile Include="DAOrderStatus.cs" />
     <Compile Include="DAProduct.cs" />
+    <Compile Include="DAProductOrder.cs" />
     <Compile Include="DARole.cs" />
     <Compile Include="DATown.cs" />
     <Compile Include="DAUser.cs" />

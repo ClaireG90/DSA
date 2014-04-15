@@ -33,6 +33,12 @@
   <wsdl:message name="IOrder_GetProductOrderByOrderIDAndProductID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetProductOrderByOrderIDAndProductIDResponse" />
   </wsdl:message>
+  <wsdl:message name="IOrder_GetProductOrderByOrderID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductOrderByOrderID" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_GetProductOrderByOrderID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductOrderByOrderIDResponse" />
+  </wsdl:message>
   <wsdl:message name="IOrder_UpdateProductOrder_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdateProductOrder" />
   </wsdl:message>
@@ -63,6 +69,30 @@
   <wsdl:message name="IOrder_GetOrdersByAccountID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetOrdersByAccountIDResponse" />
   </wsdl:message>
+  <wsdl:message name="IOrder_GetBoughtOrdersByAccountID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoughtOrdersByAccountID" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_GetBoughtOrdersByAccountID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBoughtOrdersByAccountIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_UpdateOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_UpdateOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_DeleteProductOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProductOrder" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_DeleteProductOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteProductOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_GetWarrantyUnexpiredOrdersByOrderID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarrantyUnexpiredOrdersByOrderID" />
+  </wsdl:message>
+  <wsdl:message name="IOrder_GetWarrantyUnexpiredOrdersByOrderID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWarrantyUnexpiredOrdersByOrderIDResponse" />
+  </wsdl:message>
   <wsdl:portType name="IOrder">
     <wsdl:operation name="GetOrderStatusByID">
       <wsdl:input wsaw:Action="http://tempuri.org/IOrder/GetOrderStatusByID" message="tns:IOrder_GetOrderStatusByID_InputMessage" />
@@ -79,6 +109,10 @@
     <wsdl:operation name="GetProductOrderByOrderIDAndProductID">
       <wsdl:input wsaw:Action="http://tempuri.org/IOrder/GetProductOrderByOrderIDAndProductID" message="tns:IOrder_GetProductOrderByOrderIDAndProductID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOrder/GetProductOrderByOrderIDAndProductIDResponse" message="tns:IOrder_GetProductOrderByOrderIDAndProductID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductOrderByOrderID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrder/GetProductOrderByOrderID" message="tns:IOrder_GetProductOrderByOrderID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrder/GetProductOrderByOrderIDResponse" message="tns:IOrder_GetProductOrderByOrderID_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="UpdateProductOrder">
       <wsdl:input wsaw:Action="http://tempuri.org/IOrder/UpdateProductOrder" message="tns:IOrder_UpdateProductOrder_InputMessage" />
@@ -99,6 +133,22 @@
     <wsdl:operation name="GetOrdersByAccountID">
       <wsdl:input wsaw:Action="http://tempuri.org/IOrder/GetOrdersByAccountID" message="tns:IOrder_GetOrdersByAccountID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IOrder/GetOrdersByAccountIDResponse" message="tns:IOrder_GetOrdersByAccountID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoughtOrdersByAccountID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrder/GetBoughtOrdersByAccountID" message="tns:IOrder_GetBoughtOrdersByAccountID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrder/GetBoughtOrdersByAccountIDResponse" message="tns:IOrder_GetBoughtOrdersByAccountID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrder/UpdateOrder" message="tns:IOrder_UpdateOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrder/UpdateOrderResponse" message="tns:IOrder_UpdateOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrder/DeleteProductOrder" message="tns:IOrder_DeleteProductOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrder/DeleteProductOrderResponse" message="tns:IOrder_DeleteProductOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWarrantyUnexpiredOrdersByOrderID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IOrder/GetWarrantyUnexpiredOrdersByOrderID" message="tns:IOrder_GetWarrantyUnexpiredOrdersByOrderID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IOrder/GetWarrantyUnexpiredOrdersByOrderIDResponse" message="tns:IOrder_GetWarrantyUnexpiredOrdersByOrderID_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IOrder" type="tns:IOrder">
@@ -132,6 +182,15 @@
     </wsdl:operation>
     <wsdl:operation name="GetProductOrderByOrderIDAndProductID">
       <soap:operation soapAction="http://tempuri.org/IOrder/GetProductOrderByOrderIDAndProductID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductOrderByOrderID">
+      <soap:operation soapAction="http://tempuri.org/IOrder/GetProductOrderByOrderID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -177,6 +236,42 @@
     </wsdl:operation>
     <wsdl:operation name="GetOrdersByAccountID">
       <soap:operation soapAction="http://tempuri.org/IOrder/GetOrdersByAccountID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoughtOrdersByAccountID">
+      <soap:operation soapAction="http://tempuri.org/IOrder/GetBoughtOrdersByAccountID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOrder">
+      <soap:operation soapAction="http://tempuri.org/IOrder/UpdateOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteProductOrder">
+      <soap:operation soapAction="http://tempuri.org/IOrder/DeleteProductOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWarrantyUnexpiredOrdersByOrderID">
+      <soap:operation soapAction="http://tempuri.org/IOrder/GetWarrantyUnexpiredOrdersByOrderID" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

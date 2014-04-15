@@ -54,6 +54,8 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Fault.svc" />
+    <Content Include="Order.svc" />
     <Content Include="Product.svc" />
     <Content Include="ProductComment.svc" />
     <Content Include="UserAccount.svc" />
@@ -66,9 +68,17 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fault.svc.cs">
+      <DependentUpon>Fault.svc</DependentUpon>
+    </Compile>
+    <Compile Include="IFault.cs" />
+    <Compile Include="IOrder.cs" />
     <Compile Include="IProduct.cs" />
     <Compile Include="IProductComment.cs" />
     <Compile Include="IUserAccount.cs" />
+    <Compile Include="Order.svc.cs">
+      <DependentUpon>Order.svc</DependentUpon>
+    </Compile>
     <Compile Include="Product.svc.cs">
       <DependentUpon>Product.svc</DependentUpon>
     </Compile>

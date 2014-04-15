@@ -17,5 +17,10 @@ namespace Business
         {
             return new DAProductComment().GetCommentsByProductID(id).ToList();
         }
+
+        public void AddComment(Comment comment)
+        {
+            new DAProductComment().AddComment(comment);
+        }
     }
 }

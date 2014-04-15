@@ -29,15 +29,25 @@ namespace DataAccess
             entities.SaveChanges();
         }
 
-        public void DeleteProductOrder(ProductOrder po)
+        public void DeleteProductOrder(int oID, int pID)
         {
-            entities.ProductOrder.DeleteObject(po);
+            entities.ProductOrder.DeleteObject(GetProductOrderByOrderIDAndProductID(oID, pID));
             entities.SaveChanges();
         }
 
         public ProductOrder GetProductOrderByOrderIDAndProductID(int oID, int pID)
         {
             return entities.ProductOrder.SingleOrDefault(po => po.OrderID == oID && po.ProductID == pID);
+        }
+
+        public IEnumerable<ProductOrder> GetProductOrderByOrderID(int oID)
+        {
+            return entities.ProductOrder.Where(po => po.OrderID == oID);
+        }
+
+        public IEnumerable<ProductOrder> GetWarrantyUnexpiredOrdersByOrderID(int oID)
+        {
+            return entities.ProductOrder.Where(o => o.OrderID == oID && o.WarrantyExpiry > DateTime.Today);
         }
     }
 }

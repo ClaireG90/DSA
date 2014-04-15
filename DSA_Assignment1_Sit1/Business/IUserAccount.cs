@@ -33,5 +33,8 @@ namespace Business
 
         [OperationContract]
         IEnumerable<Account> GetAllAccounts();
+
+        [OperationContract]
+        Common.User GetUserByAccountID(int aID);
     }
 }

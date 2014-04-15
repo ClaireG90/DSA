@@ -14,5 +14,8 @@ namespace Business
     {
         [OperationContract]
         List<Common.Comment> GetCommentsByProductID(int id);
+
+        [OperationContract]
+        void AddComment(Comment comment);
     }
 }

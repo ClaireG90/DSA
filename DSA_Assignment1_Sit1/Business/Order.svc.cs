@@ -52,9 +52,34 @@ namespace Business
             return new DAProductOrder().GetProductOrderByOrderIDAndProductID(oID, pID);
         }
 
+        public List<Common.ProductOrder> GetProductOrderByOrderID(int oID)
+        {
+            return new DAProductOrder().GetProductOrderByOrderID(oID).ToList();
+        }
+
         public void UpdateProductOrder(Common.ProductOrder po)
         {
             new DAProductOrder().UpdateProductOrder(po);
+        }
+
+        public List<Common.Order> GetBoughtOrdersByAccountID(int aid)
+        {
+            return new DAOrder().GetBoughtOrdersByAccountID(aid).ToList();
+        }
+
+        public void UpdateOrder(Common.Order order)
+        {
+            new DAOrder().UpdateOrder(order);
+        }
+
+        public void DeleteProductOrder(int oID, int pID)
+        {
+            new DAProductOrder().DeleteProductOrder(oID, pID);
+        }
+
+        public List<Common.ProductOrder> GetWarrantyUnexpiredOrdersByOrderID(int oID)
+        {
+            return new DAProductOrder().GetWarrantyUnexpiredOrdersByOrderID(oID).ToList();
         }
     }
 }

@@ -22,6 +22,13 @@ namespace DataAccess
             entities.SaveChanges();
         }
 
+        public void UpdateOrder(Order order)
+        {
+            entities.Order.Attach(GetOrderByID(order.ID));
+            entities.Order.ApplyCurrentValues(order);
+            entities.SaveChanges();
+        }
+
         public Order GetOrderByID(int id)
         {
             return entities.Order.SingleOrDefault(o => o.ID == id);
@@ -30,6 +37,11 @@ namespace DataAccess
         public IEnumerable<Order> GetOrdersByAccountID(int aid)
         {
             return entities.Order.Where(o => o.AccountID == aid);
+        }
+
+        public IEnumerable<Order> GetBoughtOrdersByAccountID(int aid)
+        {
+            return entities.Order.Where(o => o.AccountID == aid && o.StatusID == 2);
         }
 
         public Order GetOrderByAccountAndStatus(int aid, int sid)

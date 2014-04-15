@@ -25,6 +25,9 @@ namespace Business
         Common.ProductOrder GetProductOrderByOrderIDAndProductID(int oID, int pID);
 
         [OperationContract]
+        List<Common.ProductOrder> GetProductOrderByOrderID(int oID);
+
+        [OperationContract]
         void UpdateProductOrder(Common.ProductOrder po);
 
         [OperationContract]
@@ -38,5 +41,17 @@ namespace Business
 
         [OperationContract]
         IEnumerable<Common.Order> GetOrdersByAccountID(int aid);
+
+        [OperationContract]
+        List<Common.Order> GetBoughtOrdersByAccountID(int aid);
+
+        [OperationContract]
+        void UpdateOrder(Common.Order order);
+
+        [OperationContract]
+        void DeleteProductOrder(int oID, int pID);
+
+        [OperationContract]
+        List<Common.ProductOrder> GetWarrantyUnexpiredOrdersByOrderID(int oID);
     }
 }

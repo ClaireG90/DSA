@@ -27,6 +27,9 @@ namespace DSA_Assignment1_Sit1.OrderServ {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrder/GetProductOrderByOrderIDAndProductID", ReplyAction="http://tempuri.org/IOrder/GetProductOrderByOrderIDAndProductIDResponse")]
         Common.ProductOrder GetProductOrderByOrderIDAndProductID(int oID, int pID);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrder/GetProductOrderByOrderID", ReplyAction="http://tempuri.org/IOrder/GetProductOrderByOrderIDResponse")]
+        Common.ProductOrder[] GetProductOrderByOrderID(int oID);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrder/UpdateProductOrder", ReplyAction="http://tempuri.org/IOrder/UpdateProductOrderResponse")]
         void UpdateProductOrder(Common.ProductOrder po);
         
@@ -41,6 +44,18 @@ namespace DSA_Assignment1_Sit1.OrderServ {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrder/GetOrdersByAccountID", ReplyAction="http://tempuri.org/IOrder/GetOrdersByAccountIDResponse")]
         Common.Order[] GetOrdersByAccountID(int aid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrder/GetBoughtOrdersByAccountID", ReplyAction="http://tempuri.org/IOrder/GetBoughtOrdersByAccountIDResponse")]
+        Common.Order[] GetBoughtOrdersByAccountID(int aid);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrder/UpdateOrder", ReplyAction="http://tempuri.org/IOrder/UpdateOrderResponse")]
+        void UpdateOrder(Common.Order order);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrder/DeleteProductOrder", ReplyAction="http://tempuri.org/IOrder/DeleteProductOrderResponse")]
+        void DeleteProductOrder(int oID, int pID);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IOrder/GetWarrantyUnexpiredOrdersByOrderID", ReplyAction="http://tempuri.org/IOrder/GetWarrantyUnexpiredOrdersByOrderIDResponse")]
+        Common.ProductOrder[] GetWarrantyUnexpiredOrdersByOrderID(int oID);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -86,6 +101,10 @@ namespace DSA_Assignment1_Sit1.OrderServ {
             return base.Channel.GetProductOrderByOrderIDAndProductID(oID, pID);
         }
         
+        public Common.ProductOrder[] GetProductOrderByOrderID(int oID) {
+            return base.Channel.GetProductOrderByOrderID(oID);
+        }
+        
         public void UpdateProductOrder(Common.ProductOrder po) {
             base.Channel.UpdateProductOrder(po);
         }
@@ -104,6 +123,22 @@ namespace DSA_Assignment1_Sit1.OrderServ {
         
         public Common.Order[] GetOrdersByAccountID(int aid) {
             return base.Channel.GetOrdersByAccountID(aid);
+        }
+        
+        public Common.Order[] GetBoughtOrdersByAccountID(int aid) {
+            return base.Channel.GetBoughtOrdersByAccountID(aid);
+        }
+        
+        public void UpdateOrder(Common.Order order) {
+            base.Channel.UpdateOrder(order);
+        }
+        
+        public void DeleteProductOrder(int oID, int pID) {
+            base.Channel.DeleteProductOrder(oID, pID);
+        }
+        
+        public Common.ProductOrder[] GetWarrantyUnexpiredOrdersByOrderID(int oID) {
+            return base.Channel.GetWarrantyUnexpiredOrdersByOrderID(oID);
         }
     }
 }

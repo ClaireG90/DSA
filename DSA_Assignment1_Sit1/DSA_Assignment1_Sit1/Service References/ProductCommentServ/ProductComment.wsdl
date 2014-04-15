@@ -15,16 +15,35 @@
   <wsdl:message name="IProductComment_GetCommentsByProductID_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetCommentsByProductIDResponse" />
   </wsdl:message>
+  <wsdl:message name="IProductComment_AddComment_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddComment" />
+  </wsdl:message>
+  <wsdl:message name="IProductComment_AddComment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCommentResponse" />
+  </wsdl:message>
   <wsdl:portType name="IProductComment">
     <wsdl:operation name="GetCommentsByProductID">
       <wsdl:input wsaw:Action="http://tempuri.org/IProductComment/GetCommentsByProductID" message="tns:IProductComment_GetCommentsByProductID_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IProductComment/GetCommentsByProductIDResponse" message="tns:IProductComment_GetCommentsByProductID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IProductComment/AddComment" message="tns:IProductComment_AddComment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IProductComment/AddCommentResponse" message="tns:IProductComment_AddComment_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IProductComment" type="tns:IProductComment">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
     <wsdl:operation name="GetCommentsByProductID">
       <soap:operation soapAction="http://tempuri.org/IProductComment/GetCommentsByProductID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddComment">
+      <soap:operation soapAction="http://tempuri.org/IProductComment/AddComment" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -55,5 +55,10 @@ namespace Business
         {
             return new DAAccount().GetAllAccounts();
         }
+
+        public User GetUserByAccountID(int aID)
+        {
+            return new DAUser().GetUserByAccountID(aID);
+        }
     }
 }

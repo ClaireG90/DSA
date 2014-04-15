@@ -35,6 +35,8 @@ namespace DSA_Assignment1_Sit1
 
             RegisterGlobalFilters(GlobalFilters.Filters);
             RegisterRoutes(RouteTable.Routes);
+
+            
         }
     }
 }

@@ -30,6 +30,7 @@ namespace DSA_Assignment1_Sit1.Controllers
         public ActionResult Login(LoginModel model)
         {
             UtilitiesApplication.Encryption encryption = new UtilitiesApplication.Encryption();
+
             if (new UserAccountServ.UserAccountClient().GetAccountByUsername(model.username) != null)
             {
                 Account account = new UserAccountServ.UserAccountClient().GetAccountByUsername(model.username);
@@ -40,8 +41,9 @@ namespace DSA_Assignment1_Sit1.Controllers
                 }
                 else
                 {
-                    // log in
                     FormsAuthentication.RedirectFromLoginPage(model.username, true);
+                    Session["accountID"] = account.ID;
+
                     return RedirectToAction("Index", "Home");
                 }
             }
@@ -49,12 +51,13 @@ namespace DSA_Assignment1_Sit1.Controllers
             {
                 ModelState.AddModelError("", "Username does not exist.");
             }
-            
+
             return RedirectToAction("Index", "Home");
         }
 
         public ActionResult Logout(LoginModel model)
         {
+            Session.Abandon();
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }

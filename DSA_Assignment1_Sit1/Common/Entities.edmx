@@ -4,89 +4,84 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="EntitiesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
-        <EntityContainer Name="EntitiesModelStoreContainer">
-          <EntitySet Name="Account" EntityType="EntitiesModel.Store.Account" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Category" EntityType="EntitiesModel.Store.Category" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Comment" EntityType="EntitiesModel.Store.Comment" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Country" EntityType="EntitiesModel.Store.Country" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Fault" EntityType="EntitiesModel.Store.Fault" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="FaultLog" EntityType="EntitiesModel.Store.FaultLog" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="FaultStatus" EntityType="EntitiesModel.Store.FaultStatus" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Order" EntityType="EntitiesModel.Store.Order" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="OrderStatus" EntityType="EntitiesModel.Store.OrderStatus" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Product" EntityType="EntitiesModel.Store.Product" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="ProductOrder" EntityType="EntitiesModel.Store.ProductOrder" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Rating" EntityType="EntitiesModel.Store.Rating" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Role" EntityType="EntitiesModel.Store.Role" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="Town" EntityType="EntitiesModel.Store.Town" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="User" EntityType="EntitiesModel.Store.User" store:Type="Tables" Schema="dbo" />
-          <EntitySet Name="UserRole" EntityType="EntitiesModel.Store.UserRole" store:Type="Tables" Schema="dbo" />
-          <AssociationSet Name="FK_Comment_Account" Association="EntitiesModel.Store.FK_Comment_Account">
+    <Schema Namespace="DSA_AssignmentModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DSA_AssignmentModelStoreContainer">
+          <EntitySet Name="Account" EntityType="DSA_AssignmentModel.Store.Account" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Category" EntityType="DSA_AssignmentModel.Store.Category" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Comment" EntityType="DSA_AssignmentModel.Store.Comment" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Country" EntityType="DSA_AssignmentModel.Store.Country" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Fault" EntityType="DSA_AssignmentModel.Store.Fault" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="FaultLog" EntityType="DSA_AssignmentModel.Store.FaultLog" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Order" EntityType="DSA_AssignmentModel.Store.Order" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="OrderStatus" EntityType="DSA_AssignmentModel.Store.OrderStatus" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Product" EntityType="DSA_AssignmentModel.Store.Product" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="ProductOrder" EntityType="DSA_AssignmentModel.Store.ProductOrder" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Rating" EntityType="DSA_AssignmentModel.Store.Rating" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Role" EntityType="DSA_AssignmentModel.Store.Role" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Town" EntityType="DSA_AssignmentModel.Store.Town" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="User" EntityType="DSA_AssignmentModel.Store.User" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="UserRole" EntityType="DSA_AssignmentModel.Store.UserRole" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK_Comment_Account" Association="DSA_AssignmentModel.Store.FK_Comment_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="Comment" EntitySet="Comment" />
           </AssociationSet>
-          <AssociationSet Name="FK_Comment_Product" Association="EntitiesModel.Store.FK_Comment_Product">
+          <AssociationSet Name="FK_Comment_Product" Association="DSA_AssignmentModel.Store.FK_Comment_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="Comment" EntitySet="Comment" />
           </AssociationSet>
-          <AssociationSet Name="FK_Fault_Account" Association="EntitiesModel.Store.FK_Fault_Account">
+          <AssociationSet Name="FK_Fault_Account" Association="DSA_AssignmentModel.Store.FK_Fault_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="Fault" EntitySet="Fault" />
           </AssociationSet>
-          <AssociationSet Name="FK_Fault_Product" Association="EntitiesModel.Store.FK_Fault_Product">
+          <AssociationSet Name="FK_Fault_Product" Association="DSA_AssignmentModel.Store.FK_Fault_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="Fault" EntitySet="Fault" />
           </AssociationSet>
-          <AssociationSet Name="FK_FaultLog_Fault" Association="EntitiesModel.Store.FK_FaultLog_Fault">
+          <AssociationSet Name="FK_FaultLog_Fault" Association="DSA_AssignmentModel.Store.FK_FaultLog_Fault">
             <End Role="Fault" EntitySet="Fault" />
             <End Role="FaultLog" EntitySet="FaultLog" />
           </AssociationSet>
-          <AssociationSet Name="FK_FaultLog_FaultStatus" Association="EntitiesModel.Store.FK_FaultLog_FaultStatus">
-            <End Role="FaultStatus" EntitySet="FaultStatus" />
-            <End Role="FaultLog" EntitySet="FaultLog" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Order_OrderStatus" Association="EntitiesModel.Store.FK_Order_OrderStatus">
+          <AssociationSet Name="FK_Order_OrderStatus" Association="DSA_AssignmentModel.Store.FK_Order_OrderStatus">
             <End Role="OrderStatus" EntitySet="OrderStatus" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_Product_Category" Association="EntitiesModel.Store.FK_Product_Category">
+          <AssociationSet Name="FK_Product_Category" Association="DSA_AssignmentModel.Store.FK_Product_Category">
             <End Role="Category" EntitySet="Category" />
             <End Role="Product" EntitySet="Product" />
           </AssociationSet>
-          <AssociationSet Name="FK_ProductOrder_Order" Association="EntitiesModel.Store.FK_ProductOrder_Order">
+          <AssociationSet Name="FK_ProductOrder_Order" Association="DSA_AssignmentModel.Store.FK_ProductOrder_Order">
             <End Role="Order" EntitySet="Order" />
             <End Role="ProductOrder" EntitySet="ProductOrder" />
           </AssociationSet>
-          <AssociationSet Name="FK_ProductOrder_Product" Association="EntitiesModel.Store.FK_ProductOrder_Product">
+          <AssociationSet Name="FK_ProductOrder_Product" Association="DSA_AssignmentModel.Store.FK_ProductOrder_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="ProductOrder" EntitySet="ProductOrder" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rating_Account" Association="EntitiesModel.Store.FK_Rating_Account">
+          <AssociationSet Name="FK_Rating_Account" Association="DSA_AssignmentModel.Store.FK_Rating_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="Rating" EntitySet="Rating" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rating_Product" Association="EntitiesModel.Store.FK_Rating_Product">
+          <AssociationSet Name="FK_Rating_Product" Association="DSA_AssignmentModel.Store.FK_Rating_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="Rating" EntitySet="Rating" />
           </AssociationSet>
-          <AssociationSet Name="FK_Town_Country" Association="EntitiesModel.Store.FK_Town_Country">
+          <AssociationSet Name="FK_Town_Country" Association="DSA_AssignmentModel.Store.FK_Town_Country">
             <End Role="Country" EntitySet="Country" />
             <End Role="Town" EntitySet="Town" />
           </AssociationSet>
-          <AssociationSet Name="FK_User_Account" Association="EntitiesModel.Store.FK_User_Account">
+          <AssociationSet Name="FK_User_Account" Association="DSA_AssignmentModel.Store.FK_User_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
-          <AssociationSet Name="FK_User_Town" Association="EntitiesModel.Store.FK_User_Town">
+          <AssociationSet Name="FK_User_Town" Association="DSA_AssignmentModel.Store.FK_User_Town">
             <End Role="Town" EntitySet="Town" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
-          <AssociationSet Name="FK_UserRole_Account" Association="EntitiesModel.Store.FK_UserRole_Account">
+          <AssociationSet Name="FK_UserRole_Account" Association="DSA_AssignmentModel.Store.FK_UserRole_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="UserRole" EntitySet="UserRole" />
           </AssociationSet>
-          <AssociationSet Name="FK_UserRole_Role" Association="EntitiesModel.Store.FK_UserRole_Role">
+          <AssociationSet Name="FK_UserRole_Role" Association="DSA_AssignmentModel.Store.FK_UserRole_Role">
             <End Role="Role" EntitySet="Role" />
             <End Role="UserRole" EntitySet="UserRole" />
           </AssociationSet>
@@ -131,24 +126,17 @@
           <Property Name="TicketNumber" Type="int" Nullable="false" />
           <Property Name="ProductID" Type="int" Nullable="false" />
           <Property Name="AccountID" Type="int" Nullable="false" />
-          <Property Name="Barcode" Type="int" Nullable="false" />
+          <Property Name="Barcode" Type="image" Nullable="false" />
         </EntityType>
         <EntityType Name="FaultLog">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="FaultID" Type="int" Nullable="false" />
-          <Property Name="StatusID" Type="int" Nullable="false" />
           <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
           <Property Name="DateOfReport" Type="datetime" Nullable="false" />
-        </EntityType>
-        <EntityType Name="FaultStatus">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="100" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -187,6 +175,7 @@
           <Property Name="ProductID" Type="int" Nullable="false" />
           <Property Name="OrderID" Type="int" Nullable="false" />
           <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="WarrantyExpiry" Type="datetime" Nullable="false" />
         </EntityType>
         <EntityType Name="Rating">
           <Key>
@@ -235,8 +224,8 @@
           <Property Name="RoleID" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_Comment_Account">
-          <End Role="Account" Type="EntitiesModel.Store.Account" Multiplicity="1" />
-          <End Role="Comment" Type="EntitiesModel.Store.Comment" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Store.Account" Multiplicity="1" />
+          <End Role="Comment" Type="DSA_AssignmentModel.Store.Comment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="ID" />
@@ -247,8 +236,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Comment_Product">
-          <End Role="Product" Type="EntitiesModel.Store.Product" Multiplicity="1" />
-          <End Role="Comment" Type="EntitiesModel.Store.Comment" Multiplicity="*" />
+          <End Role="Product" Type="DSA_AssignmentModel.Store.Product" Multiplicity="1" />
+          <End Role="Comment" Type="DSA_AssignmentModel.Store.Comment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ID" />
@@ -259,8 +248,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Fault_Account">
-          <End Role="Account" Type="EntitiesModel.Store.Account" Multiplicity="1" />
-          <End Role="Fault" Type="EntitiesModel.Store.Fault" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Store.Account" Multiplicity="1" />
+          <End Role="Fault" Type="DSA_AssignmentModel.Store.Fault" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="ID" />
@@ -271,8 +260,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Fault_Product">
-          <End Role="Product" Type="EntitiesModel.Store.Product" Multiplicity="1" />
-          <End Role="Fault" Type="EntitiesModel.Store.Fault" Multiplicity="*" />
+          <End Role="Product" Type="DSA_AssignmentModel.Store.Product" Multiplicity="1" />
+          <End Role="Fault" Type="DSA_AssignmentModel.Store.Fault" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ID" />
@@ -283,8 +272,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_FaultLog_Fault">
-          <End Role="Fault" Type="EntitiesModel.Store.Fault" Multiplicity="1" />
-          <End Role="FaultLog" Type="EntitiesModel.Store.FaultLog" Multiplicity="*" />
+          <End Role="Fault" Type="DSA_AssignmentModel.Store.Fault" Multiplicity="1" />
+          <End Role="FaultLog" Type="DSA_AssignmentModel.Store.FaultLog" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Fault">
               <PropertyRef Name="ID" />
@@ -294,21 +283,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_FaultLog_FaultStatus">
-          <End Role="FaultStatus" Type="EntitiesModel.Store.FaultStatus" Multiplicity="1" />
-          <End Role="FaultLog" Type="EntitiesModel.Store.FaultLog" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="FaultStatus">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="FaultLog">
-              <PropertyRef Name="StatusID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Order_OrderStatus">
-          <End Role="OrderStatus" Type="EntitiesModel.Store.OrderStatus" Multiplicity="1" />
-          <End Role="Order" Type="EntitiesModel.Store.Order" Multiplicity="*" />
+          <End Role="OrderStatus" Type="DSA_AssignmentModel.Store.OrderStatus" Multiplicity="1" />
+          <End Role="Order" Type="DSA_AssignmentModel.Store.Order" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="OrderStatus">
               <PropertyRef Name="ID" />
@@ -319,8 +296,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Product_Category">
-          <End Role="Category" Type="EntitiesModel.Store.Category" Multiplicity="1" />
-          <End Role="Product" Type="EntitiesModel.Store.Product" Multiplicity="*" />
+          <End Role="Category" Type="DSA_AssignmentModel.Store.Category" Multiplicity="1" />
+          <End Role="Product" Type="DSA_AssignmentModel.Store.Product" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Category">
               <PropertyRef Name="ID" />
@@ -331,8 +308,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ProductOrder_Order">
-          <End Role="Order" Type="EntitiesModel.Store.Order" Multiplicity="1" />
-          <End Role="ProductOrder" Type="EntitiesModel.Store.ProductOrder" Multiplicity="*" />
+          <End Role="Order" Type="DSA_AssignmentModel.Store.Order" Multiplicity="1" />
+          <End Role="ProductOrder" Type="DSA_AssignmentModel.Store.ProductOrder" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Order">
               <PropertyRef Name="ID" />
@@ -343,8 +320,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ProductOrder_Product">
-          <End Role="Product" Type="EntitiesModel.Store.Product" Multiplicity="1" />
-          <End Role="ProductOrder" Type="EntitiesModel.Store.ProductOrder" Multiplicity="*" />
+          <End Role="Product" Type="DSA_AssignmentModel.Store.Product" Multiplicity="1" />
+          <End Role="ProductOrder" Type="DSA_AssignmentModel.Store.ProductOrder" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ID" />
@@ -355,8 +332,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rating_Account">
-          <End Role="Account" Type="EntitiesModel.Store.Account" Multiplicity="1" />
-          <End Role="Rating" Type="EntitiesModel.Store.Rating" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Store.Account" Multiplicity="1" />
+          <End Role="Rating" Type="DSA_AssignmentModel.Store.Rating" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="ID" />
@@ -367,8 +344,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rating_Product">
-          <End Role="Product" Type="EntitiesModel.Store.Product" Multiplicity="1" />
-          <End Role="Rating" Type="EntitiesModel.Store.Rating" Multiplicity="*" />
+          <End Role="Product" Type="DSA_AssignmentModel.Store.Product" Multiplicity="1" />
+          <End Role="Rating" Type="DSA_AssignmentModel.Store.Rating" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ID" />
@@ -379,8 +356,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Town_Country">
-          <End Role="Country" Type="EntitiesModel.Store.Country" Multiplicity="1" />
-          <End Role="Town" Type="EntitiesModel.Store.Town" Multiplicity="*" />
+          <End Role="Country" Type="DSA_AssignmentModel.Store.Country" Multiplicity="1" />
+          <End Role="Town" Type="DSA_AssignmentModel.Store.Town" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Country">
               <PropertyRef Name="ID" />
@@ -391,8 +368,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Account">
-          <End Role="Account" Type="EntitiesModel.Store.Account" Multiplicity="1" />
-          <End Role="User" Type="EntitiesModel.Store.User" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Store.Account" Multiplicity="1" />
+          <End Role="User" Type="DSA_AssignmentModel.Store.User" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="ID" />
@@ -403,8 +380,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Town">
-          <End Role="Town" Type="EntitiesModel.Store.Town" Multiplicity="1" />
-          <End Role="User" Type="EntitiesModel.Store.User" Multiplicity="*" />
+          <End Role="Town" Type="DSA_AssignmentModel.Store.Town" Multiplicity="1" />
+          <End Role="User" Type="DSA_AssignmentModel.Store.User" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Town">
               <PropertyRef Name="ID" />
@@ -415,8 +392,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_UserRole_Account">
-          <End Role="Account" Type="EntitiesModel.Store.Account" Multiplicity="1" />
-          <End Role="UserRole" Type="EntitiesModel.Store.UserRole" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Store.Account" Multiplicity="1" />
+          <End Role="UserRole" Type="DSA_AssignmentModel.Store.UserRole" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="ID" />
@@ -427,8 +404,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_UserRole_Role">
-          <End Role="Role" Type="EntitiesModel.Store.Role" Multiplicity="1" />
-          <End Role="UserRole" Type="EntitiesModel.Store.UserRole" Multiplicity="*" />
+          <End Role="Role" Type="DSA_AssignmentModel.Store.Role" Multiplicity="1" />
+          <End Role="UserRole" Type="DSA_AssignmentModel.Store.UserRole" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Role">
               <PropertyRef Name="ID" />
@@ -441,84 +418,79 @@
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="EntitiesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+      <Schema Namespace="DSA_AssignmentModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Account" EntityType="EntitiesModel.Account" />
-          <EntitySet Name="Category" EntityType="EntitiesModel.Category" />
-          <EntitySet Name="Comment" EntityType="EntitiesModel.Comment" />
-          <EntitySet Name="Country" EntityType="EntitiesModel.Country" />
-          <EntitySet Name="Fault" EntityType="EntitiesModel.Fault" />
-          <EntitySet Name="FaultLog" EntityType="EntitiesModel.FaultLog" />
-          <EntitySet Name="FaultStatus" EntityType="EntitiesModel.FaultStatus" />
-          <EntitySet Name="Order" EntityType="EntitiesModel.Order" />
-          <EntitySet Name="OrderStatus" EntityType="EntitiesModel.OrderStatus" />
-          <EntitySet Name="Product" EntityType="EntitiesModel.Product" />
-          <EntitySet Name="ProductOrder" EntityType="EntitiesModel.ProductOrder" />
-          <EntitySet Name="Rating" EntityType="EntitiesModel.Rating" />
-          <EntitySet Name="Role" EntityType="EntitiesModel.Role" />
-          <EntitySet Name="Town" EntityType="EntitiesModel.Town" />
-          <EntitySet Name="User" EntityType="EntitiesModel.User" />
-          <AssociationSet Name="FK_Comment_Account" Association="EntitiesModel.FK_Comment_Account">
+          <EntitySet Name="Account" EntityType="DSA_AssignmentModel.Account" />
+          <EntitySet Name="Category" EntityType="DSA_AssignmentModel.Category" />
+          <EntitySet Name="Comment" EntityType="DSA_AssignmentModel.Comment" />
+          <EntitySet Name="Country" EntityType="DSA_AssignmentModel.Country" />
+          <EntitySet Name="Fault" EntityType="DSA_AssignmentModel.Fault" />
+          <EntitySet Name="FaultLog" EntityType="DSA_AssignmentModel.FaultLog" />
+          <EntitySet Name="Order" EntityType="DSA_AssignmentModel.Order" />
+          <EntitySet Name="OrderStatus" EntityType="DSA_AssignmentModel.OrderStatus" />
+          <EntitySet Name="Product" EntityType="DSA_AssignmentModel.Product" />
+          <EntitySet Name="ProductOrder" EntityType="DSA_AssignmentModel.ProductOrder" />
+          <EntitySet Name="Rating" EntityType="DSA_AssignmentModel.Rating" />
+          <EntitySet Name="Role" EntityType="DSA_AssignmentModel.Role" />
+          <EntitySet Name="Town" EntityType="DSA_AssignmentModel.Town" />
+          <EntitySet Name="User" EntityType="DSA_AssignmentModel.User" />
+          <AssociationSet Name="FK_Comment_Account" Association="DSA_AssignmentModel.FK_Comment_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="Comment" EntitySet="Comment" />
           </AssociationSet>
-          <AssociationSet Name="FK_Fault_Account" Association="EntitiesModel.FK_Fault_Account">
+          <AssociationSet Name="FK_Fault_Account" Association="DSA_AssignmentModel.FK_Fault_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="Fault" EntitySet="Fault" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rating_Account" Association="EntitiesModel.FK_Rating_Account">
+          <AssociationSet Name="FK_Rating_Account" Association="DSA_AssignmentModel.FK_Rating_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="Rating" EntitySet="Rating" />
           </AssociationSet>
-          <AssociationSet Name="FK_User_Account" Association="EntitiesModel.FK_User_Account">
+          <AssociationSet Name="FK_User_Account" Association="DSA_AssignmentModel.FK_User_Account">
             <End Role="Account" EntitySet="Account" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
-          <AssociationSet Name="FK_Product_Category" Association="EntitiesModel.FK_Product_Category">
+          <AssociationSet Name="FK_Product_Category" Association="DSA_AssignmentModel.FK_Product_Category">
             <End Role="Category" EntitySet="Category" />
             <End Role="Product" EntitySet="Product" />
           </AssociationSet>
-          <AssociationSet Name="FK_Comment_Product" Association="EntitiesModel.FK_Comment_Product">
+          <AssociationSet Name="FK_Comment_Product" Association="DSA_AssignmentModel.FK_Comment_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="Comment" EntitySet="Comment" />
           </AssociationSet>
-          <AssociationSet Name="FK_Town_Country" Association="EntitiesModel.FK_Town_Country">
+          <AssociationSet Name="FK_Town_Country" Association="DSA_AssignmentModel.FK_Town_Country">
             <End Role="Country" EntitySet="Country" />
             <End Role="Town" EntitySet="Town" />
           </AssociationSet>
-          <AssociationSet Name="FK_Fault_Product" Association="EntitiesModel.FK_Fault_Product">
+          <AssociationSet Name="FK_Fault_Product" Association="DSA_AssignmentModel.FK_Fault_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="Fault" EntitySet="Fault" />
           </AssociationSet>
-          <AssociationSet Name="FK_FaultLog_Fault" Association="EntitiesModel.FK_FaultLog_Fault">
+          <AssociationSet Name="FK_FaultLog_Fault" Association="DSA_AssignmentModel.FK_FaultLog_Fault">
             <End Role="Fault" EntitySet="Fault" />
             <End Role="FaultLog" EntitySet="FaultLog" />
           </AssociationSet>
-          <AssociationSet Name="FK_FaultLog_FaultStatus" Association="EntitiesModel.FK_FaultLog_FaultStatus">
-            <End Role="FaultStatus" EntitySet="FaultStatus" />
-            <End Role="FaultLog" EntitySet="FaultLog" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Order_OrderStatus" Association="EntitiesModel.FK_Order_OrderStatus">
+          <AssociationSet Name="FK_Order_OrderStatus" Association="DSA_AssignmentModel.FK_Order_OrderStatus">
             <End Role="OrderStatus" EntitySet="OrderStatus" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
-          <AssociationSet Name="FK_ProductOrder_Order" Association="EntitiesModel.FK_ProductOrder_Order">
+          <AssociationSet Name="FK_ProductOrder_Order" Association="DSA_AssignmentModel.FK_ProductOrder_Order">
             <End Role="Order" EntitySet="Order" />
             <End Role="ProductOrder" EntitySet="ProductOrder" />
           </AssociationSet>
-          <AssociationSet Name="FK_ProductOrder_Product" Association="EntitiesModel.FK_ProductOrder_Product">
+          <AssociationSet Name="FK_ProductOrder_Product" Association="DSA_AssignmentModel.FK_ProductOrder_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="ProductOrder" EntitySet="ProductOrder" />
           </AssociationSet>
-          <AssociationSet Name="FK_Rating_Product" Association="EntitiesModel.FK_Rating_Product">
+          <AssociationSet Name="FK_Rating_Product" Association="DSA_AssignmentModel.FK_Rating_Product">
             <End Role="Product" EntitySet="Product" />
             <End Role="Rating" EntitySet="Rating" />
           </AssociationSet>
-          <AssociationSet Name="FK_User_Town" Association="EntitiesModel.FK_User_Town">
+          <AssociationSet Name="FK_User_Town" Association="DSA_AssignmentModel.FK_User_Town">
             <End Role="Town" EntitySet="Town" />
             <End Role="User" EntitySet="User" />
           </AssociationSet>
-          <AssociationSet Name="UserRole" Association="EntitiesModel.UserRole">
+          <AssociationSet Name="UserRole" Association="DSA_AssignmentModel.UserRole">
             <End Role="Account" EntitySet="Account" />
             <End Role="Role" EntitySet="Role" />
           </AssociationSet>
@@ -531,11 +503,11 @@
           <Property Name="Username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="PIN" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Comment" Relationship="EntitiesModel.FK_Comment_Account" FromRole="Account" ToRole="Comment" />
-          <NavigationProperty Name="Fault" Relationship="EntitiesModel.FK_Fault_Account" FromRole="Account" ToRole="Fault" />
-          <NavigationProperty Name="Rating" Relationship="EntitiesModel.FK_Rating_Account" FromRole="Account" ToRole="Rating" />
-          <NavigationProperty Name="User" Relationship="EntitiesModel.FK_User_Account" FromRole="Account" ToRole="User" />
-          <NavigationProperty Name="Role" Relationship="EntitiesModel.UserRole" FromRole="Account" ToRole="Role" />
+          <NavigationProperty Name="Comment" Relationship="DSA_AssignmentModel.FK_Comment_Account" FromRole="Account" ToRole="Comment" />
+          <NavigationProperty Name="Fault" Relationship="DSA_AssignmentModel.FK_Fault_Account" FromRole="Account" ToRole="Fault" />
+          <NavigationProperty Name="Rating" Relationship="DSA_AssignmentModel.FK_Rating_Account" FromRole="Account" ToRole="Rating" />
+          <NavigationProperty Name="User" Relationship="DSA_AssignmentModel.FK_User_Account" FromRole="Account" ToRole="User" />
+          <NavigationProperty Name="Role" Relationship="DSA_AssignmentModel.UserRole" FromRole="Account" ToRole="Role" />
         </EntityType>
         <EntityType Name="Category">
           <Key>
@@ -543,7 +515,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Product" Relationship="EntitiesModel.FK_Product_Category" FromRole="Category" ToRole="Product" />
+          <NavigationProperty Name="Product" Relationship="DSA_AssignmentModel.FK_Product_Category" FromRole="Category" ToRole="Product" />
         </EntityType>
         <EntityType Name="Comment">
           <Key>
@@ -553,8 +525,8 @@
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="Comment1" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="AccountID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Account" Relationship="EntitiesModel.FK_Comment_Account" FromRole="Comment" ToRole="Account" />
-          <NavigationProperty Name="Product" Relationship="EntitiesModel.FK_Comment_Product" FromRole="Comment" ToRole="Product" />
+          <NavigationProperty Name="Account" Relationship="DSA_AssignmentModel.FK_Comment_Account" FromRole="Comment" ToRole="Account" />
+          <NavigationProperty Name="Product" Relationship="DSA_AssignmentModel.FK_Comment_Product" FromRole="Comment" ToRole="Product" />
         </EntityType>
         <EntityType Name="Country">
           <Key>
@@ -562,7 +534,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Town" Relationship="EntitiesModel.FK_Town_Country" FromRole="Country" ToRole="Town" />
+          <NavigationProperty Name="Town" Relationship="DSA_AssignmentModel.FK_Town_Country" FromRole="Country" ToRole="Town" />
         </EntityType>
         <EntityType Name="Fault">
           <Key>
@@ -572,10 +544,10 @@
           <Property Name="TicketNumber" Type="Int32" Nullable="false" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="AccountID" Type="Int32" Nullable="false" />
-          <Property Name="Barcode" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Account" Relationship="EntitiesModel.FK_Fault_Account" FromRole="Fault" ToRole="Account" />
-          <NavigationProperty Name="Product" Relationship="EntitiesModel.FK_Fault_Product" FromRole="Fault" ToRole="Product" />
-          <NavigationProperty Name="FaultLog" Relationship="EntitiesModel.FK_FaultLog_Fault" FromRole="Fault" ToRole="FaultLog" />
+          <Property Name="Barcode" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Account" Relationship="DSA_AssignmentModel.FK_Fault_Account" FromRole="Fault" ToRole="Account" />
+          <NavigationProperty Name="Product" Relationship="DSA_AssignmentModel.FK_Fault_Product" FromRole="Fault" ToRole="Product" />
+          <NavigationProperty Name="FaultLog" Relationship="DSA_AssignmentModel.FK_FaultLog_Fault" FromRole="Fault" ToRole="FaultLog" />
         </EntityType>
         <EntityType Name="FaultLog">
           <Key>
@@ -583,19 +555,10 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" />
           <Property Name="FaultID" Type="Int32" Nullable="false" />
-          <Property Name="StatusID" Type="Int32" Nullable="false" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="DateOfReport" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="Fault" Relationship="EntitiesModel.FK_FaultLog_Fault" FromRole="FaultLog" ToRole="Fault" />
-          <NavigationProperty Name="FaultStatus" Relationship="EntitiesModel.FK_FaultLog_FaultStatus" FromRole="FaultLog" ToRole="FaultStatus" />
-        </EntityType>
-        <EntityType Name="FaultStatus">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="FaultLog" Relationship="EntitiesModel.FK_FaultLog_FaultStatus" FromRole="FaultStatus" ToRole="FaultLog" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
+          <NavigationProperty Name="Fault" Relationship="DSA_AssignmentModel.FK_FaultLog_Fault" FromRole="FaultLog" ToRole="Fault" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -605,8 +568,8 @@
           <Property Name="DateOfOrder" Type="DateTime" Nullable="false" />
           <Property Name="AccountID" Type="Int32" Nullable="false" />
           <Property Name="StatusID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="OrderStatus" Relationship="EntitiesModel.FK_Order_OrderStatus" FromRole="Order" ToRole="OrderStatus" />
-          <NavigationProperty Name="ProductOrder" Relationship="EntitiesModel.FK_ProductOrder_Order" FromRole="Order" ToRole="ProductOrder" />
+          <NavigationProperty Name="OrderStatus" Relationship="DSA_AssignmentModel.FK_Order_OrderStatus" FromRole="Order" ToRole="OrderStatus" />
+          <NavigationProperty Name="ProductOrder" Relationship="DSA_AssignmentModel.FK_ProductOrder_Order" FromRole="Order" ToRole="ProductOrder" />
         </EntityType>
         <EntityType Name="OrderStatus">
           <Key>
@@ -614,7 +577,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Order" Relationship="EntitiesModel.FK_Order_OrderStatus" FromRole="OrderStatus" ToRole="Order" />
+          <NavigationProperty Name="Order" Relationship="DSA_AssignmentModel.FK_Order_OrderStatus" FromRole="OrderStatus" ToRole="Order" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -627,12 +590,12 @@
           <Property Name="CategoryID" Type="Int32" Nullable="false" />
           <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
           <Property Name="DateListed" Type="DateTime" Nullable="false" />
-          <NavigationProperty Name="Category" Relationship="EntitiesModel.FK_Product_Category" FromRole="Product" ToRole="Category" />
-          <NavigationProperty Name="Comment" Relationship="EntitiesModel.FK_Comment_Product" FromRole="Product" ToRole="Comment" />
-          <NavigationProperty Name="Fault" Relationship="EntitiesModel.FK_Fault_Product" FromRole="Product" ToRole="Fault" />
-          <NavigationProperty Name="ProductOrder" Relationship="EntitiesModel.FK_ProductOrder_Product" FromRole="Product" ToRole="ProductOrder" />
-          <NavigationProperty Name="Rating" Relationship="EntitiesModel.FK_Rating_Product" FromRole="Product" ToRole="Rating" />
-          <Property Type="Int32" Name="Quantity" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Category" Relationship="DSA_AssignmentModel.FK_Product_Category" FromRole="Product" ToRole="Category" />
+          <NavigationProperty Name="Comment" Relationship="DSA_AssignmentModel.FK_Comment_Product" FromRole="Product" ToRole="Comment" />
+          <NavigationProperty Name="Fault" Relationship="DSA_AssignmentModel.FK_Fault_Product" FromRole="Product" ToRole="Fault" />
+          <NavigationProperty Name="ProductOrder" Relationship="DSA_AssignmentModel.FK_ProductOrder_Product" FromRole="Product" ToRole="ProductOrder" />
+          <NavigationProperty Name="Rating" Relationship="DSA_AssignmentModel.FK_Rating_Product" FromRole="Product" ToRole="Rating" />
         </EntityType>
         <EntityType Name="ProductOrder">
           <Key>
@@ -642,8 +605,9 @@
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="OrderID" Type="Int32" Nullable="false" />
           <Property Name="Quantity" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Order" Relationship="EntitiesModel.FK_ProductOrder_Order" FromRole="ProductOrder" ToRole="Order" />
-          <NavigationProperty Name="Product" Relationship="EntitiesModel.FK_ProductOrder_Product" FromRole="ProductOrder" ToRole="Product" />
+          <Property Name="WarrantyExpiry" Type="DateTime" Nullable="false" />
+          <NavigationProperty Name="Order" Relationship="DSA_AssignmentModel.FK_ProductOrder_Order" FromRole="ProductOrder" ToRole="Order" />
+          <NavigationProperty Name="Product" Relationship="DSA_AssignmentModel.FK_ProductOrder_Product" FromRole="ProductOrder" ToRole="Product" />
         </EntityType>
         <EntityType Name="Rating">
           <Key>
@@ -653,8 +617,8 @@
           <Property Name="AccountID" Type="Int32" Nullable="false" />
           <Property Name="ProductID" Type="Int32" Nullable="false" />
           <Property Name="Rating1" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Account" Relationship="EntitiesModel.FK_Rating_Account" FromRole="Rating" ToRole="Account" />
-          <NavigationProperty Name="Product" Relationship="EntitiesModel.FK_Rating_Product" FromRole="Rating" ToRole="Product" />
+          <NavigationProperty Name="Account" Relationship="DSA_AssignmentModel.FK_Rating_Account" FromRole="Rating" ToRole="Account" />
+          <NavigationProperty Name="Product" Relationship="DSA_AssignmentModel.FK_Rating_Product" FromRole="Rating" ToRole="Product" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -662,7 +626,7 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Account" Relationship="EntitiesModel.UserRole" FromRole="Role" ToRole="Account" />
+          <NavigationProperty Name="Account" Relationship="DSA_AssignmentModel.UserRole" FromRole="Role" ToRole="Account" />
         </EntityType>
         <EntityType Name="Town">
           <Key>
@@ -671,8 +635,8 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="CountryID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Country" Relationship="EntitiesModel.FK_Town_Country" FromRole="Town" ToRole="Country" />
-          <NavigationProperty Name="User" Relationship="EntitiesModel.FK_User_Town" FromRole="Town" ToRole="User" />
+          <NavigationProperty Name="Country" Relationship="DSA_AssignmentModel.FK_Town_Country" FromRole="Town" ToRole="Country" />
+          <NavigationProperty Name="User" Relationship="DSA_AssignmentModel.FK_User_Town" FromRole="Town" ToRole="User" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -687,12 +651,12 @@
           <Property Name="StreetName" Type="String" Nullable="false" MaxLength="100" Unicode="true" FixedLength="false" />
           <Property Name="TownID" Type="Int32" Nullable="false" />
           <Property Name="AccountID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Account" Relationship="EntitiesModel.FK_User_Account" FromRole="User" ToRole="Account" />
-          <NavigationProperty Name="Town" Relationship="EntitiesModel.FK_User_Town" FromRole="User" ToRole="Town" />
+          <NavigationProperty Name="Account" Relationship="DSA_AssignmentModel.FK_User_Account" FromRole="User" ToRole="Account" />
+          <NavigationProperty Name="Town" Relationship="DSA_AssignmentModel.FK_User_Town" FromRole="User" ToRole="Town" />
         </EntityType>
         <Association Name="FK_Comment_Account">
-          <End Role="Account" Type="EntitiesModel.Account" Multiplicity="1" />
-          <End Role="Comment" Type="EntitiesModel.Comment" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Account" Multiplicity="1" />
+          <End Role="Comment" Type="DSA_AssignmentModel.Comment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="ID" />
@@ -703,8 +667,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Fault_Account">
-          <End Role="Account" Type="EntitiesModel.Account" Multiplicity="1" />
-          <End Role="Fault" Type="EntitiesModel.Fault" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Account" Multiplicity="1" />
+          <End Role="Fault" Type="DSA_AssignmentModel.Fault" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="ID" />
@@ -715,8 +679,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rating_Account">
-          <End Role="Account" Type="EntitiesModel.Account" Multiplicity="1" />
-          <End Role="Rating" Type="EntitiesModel.Rating" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Account" Multiplicity="1" />
+          <End Role="Rating" Type="DSA_AssignmentModel.Rating" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="ID" />
@@ -727,8 +691,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Account">
-          <End Role="Account" Type="EntitiesModel.Account" Multiplicity="1" />
-          <End Role="User" Type="EntitiesModel.User" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Account" Multiplicity="1" />
+          <End Role="User" Type="DSA_AssignmentModel.User" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Account">
               <PropertyRef Name="ID" />
@@ -739,8 +703,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Product_Category">
-          <End Role="Category" Type="EntitiesModel.Category" Multiplicity="1" />
-          <End Role="Product" Type="EntitiesModel.Product" Multiplicity="*" />
+          <End Role="Category" Type="DSA_AssignmentModel.Category" Multiplicity="1" />
+          <End Role="Product" Type="DSA_AssignmentModel.Product" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Category">
               <PropertyRef Name="ID" />
@@ -751,8 +715,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Comment_Product">
-          <End Role="Product" Type="EntitiesModel.Product" Multiplicity="1" />
-          <End Role="Comment" Type="EntitiesModel.Comment" Multiplicity="*" />
+          <End Role="Product" Type="DSA_AssignmentModel.Product" Multiplicity="1" />
+          <End Role="Comment" Type="DSA_AssignmentModel.Comment" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ID" />
@@ -763,8 +727,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Town_Country">
-          <End Role="Country" Type="EntitiesModel.Country" Multiplicity="1" />
-          <End Role="Town" Type="EntitiesModel.Town" Multiplicity="*" />
+          <End Role="Country" Type="DSA_AssignmentModel.Country" Multiplicity="1" />
+          <End Role="Town" Type="DSA_AssignmentModel.Town" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Country">
               <PropertyRef Name="ID" />
@@ -775,8 +739,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Fault_Product">
-          <End Role="Product" Type="EntitiesModel.Product" Multiplicity="1" />
-          <End Role="Fault" Type="EntitiesModel.Fault" Multiplicity="*" />
+          <End Role="Product" Type="DSA_AssignmentModel.Product" Multiplicity="1" />
+          <End Role="Fault" Type="DSA_AssignmentModel.Fault" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ID" />
@@ -787,8 +751,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_FaultLog_Fault">
-          <End Role="Fault" Type="EntitiesModel.Fault" Multiplicity="1" />
-          <End Role="FaultLog" Type="EntitiesModel.FaultLog" Multiplicity="*" />
+          <End Role="Fault" Type="DSA_AssignmentModel.Fault" Multiplicity="1" />
+          <End Role="FaultLog" Type="DSA_AssignmentModel.FaultLog" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Fault">
               <PropertyRef Name="ID" />
@@ -798,21 +762,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_FaultLog_FaultStatus">
-          <End Role="FaultStatus" Type="EntitiesModel.FaultStatus" Multiplicity="1" />
-          <End Role="FaultLog" Type="EntitiesModel.FaultLog" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="FaultStatus">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="FaultLog">
-              <PropertyRef Name="StatusID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Order_OrderStatus">
-          <End Role="OrderStatus" Type="EntitiesModel.OrderStatus" Multiplicity="1" />
-          <End Role="Order" Type="EntitiesModel.Order" Multiplicity="*" />
+          <End Role="OrderStatus" Type="DSA_AssignmentModel.OrderStatus" Multiplicity="1" />
+          <End Role="Order" Type="DSA_AssignmentModel.Order" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="OrderStatus">
               <PropertyRef Name="ID" />
@@ -823,8 +775,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ProductOrder_Order">
-          <End Role="Order" Type="EntitiesModel.Order" Multiplicity="1" />
-          <End Role="ProductOrder" Type="EntitiesModel.ProductOrder" Multiplicity="*" />
+          <End Role="Order" Type="DSA_AssignmentModel.Order" Multiplicity="1" />
+          <End Role="ProductOrder" Type="DSA_AssignmentModel.ProductOrder" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Order">
               <PropertyRef Name="ID" />
@@ -835,8 +787,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_ProductOrder_Product">
-          <End Role="Product" Type="EntitiesModel.Product" Multiplicity="1" />
-          <End Role="ProductOrder" Type="EntitiesModel.ProductOrder" Multiplicity="*" />
+          <End Role="Product" Type="DSA_AssignmentModel.Product" Multiplicity="1" />
+          <End Role="ProductOrder" Type="DSA_AssignmentModel.ProductOrder" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ID" />
@@ -847,8 +799,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Rating_Product">
-          <End Role="Product" Type="EntitiesModel.Product" Multiplicity="1" />
-          <End Role="Rating" Type="EntitiesModel.Rating" Multiplicity="*" />
+          <End Role="Product" Type="DSA_AssignmentModel.Product" Multiplicity="1" />
+          <End Role="Rating" Type="DSA_AssignmentModel.Rating" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Product">
               <PropertyRef Name="ID" />
@@ -859,8 +811,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Town">
-          <End Role="Town" Type="EntitiesModel.Town" Multiplicity="1" />
-          <End Role="User" Type="EntitiesModel.User" Multiplicity="*" />
+          <End Role="Town" Type="DSA_AssignmentModel.Town" Multiplicity="1" />
+          <End Role="User" Type="DSA_AssignmentModel.User" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Town">
               <PropertyRef Name="ID" />
@@ -871,17 +823,17 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="UserRole">
-          <End Role="Account" Type="EntitiesModel.Account" Multiplicity="*" />
-          <End Role="Role" Type="EntitiesModel.Role" Multiplicity="*" />
+          <End Role="Account" Type="DSA_AssignmentModel.Account" Multiplicity="*" />
+          <End Role="Role" Type="DSA_AssignmentModel.Role" Multiplicity="*" />
         </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="EntitiesModelStoreContainer" CdmEntityContainer="Entities">
+        <EntityContainerMapping StorageEntityContainer="DSA_AssignmentModelStoreContainer" CdmEntityContainer="Entities">
           <EntitySetMapping Name="Account">
-            <EntityTypeMapping TypeName="EntitiesModel.Account">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Account">
               <MappingFragment StoreEntitySet="Account">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
@@ -891,7 +843,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Category">
-            <EntityTypeMapping TypeName="EntitiesModel.Category">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Category">
               <MappingFragment StoreEntitySet="Category">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -899,7 +851,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Comment">
-            <EntityTypeMapping TypeName="EntitiesModel.Comment">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Comment">
               <MappingFragment StoreEntitySet="Comment">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -909,7 +861,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Country">
-            <EntityTypeMapping TypeName="EntitiesModel.Country">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Country">
               <MappingFragment StoreEntitySet="Country">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -917,7 +869,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Fault">
-            <EntityTypeMapping TypeName="EntitiesModel.Fault">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Fault">
               <MappingFragment StoreEntitySet="Fault">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="TicketNumber" ColumnName="TicketNumber" />
@@ -928,26 +880,18 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="FaultLog">
-            <EntityTypeMapping TypeName="EntitiesModel.FaultLog">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.FaultLog">
               <MappingFragment StoreEntitySet="FaultLog">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="FaultID" ColumnName="FaultID" />
-                <ScalarProperty Name="StatusID" ColumnName="StatusID" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="DateOfReport" ColumnName="DateOfReport" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="FaultStatus">
-            <EntityTypeMapping TypeName="EntitiesModel.FaultStatus">
-              <MappingFragment StoreEntitySet="FaultStatus">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Order">
-            <EntityTypeMapping TypeName="EntitiesModel.Order">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Order">
               <MappingFragment StoreEntitySet="Order">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="DateOfOrder" ColumnName="DateOfOrder" />
@@ -957,7 +901,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrderStatus">
-            <EntityTypeMapping TypeName="EntitiesModel.OrderStatus">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.OrderStatus">
               <MappingFragment StoreEntitySet="OrderStatus">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -965,9 +909,8 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Product">
-            <EntityTypeMapping TypeName="EntitiesModel.Product">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Product">
               <MappingFragment StoreEntitySet="Product">
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Features" ColumnName="Features" />
@@ -975,20 +918,22 @@
                 <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
                 <ScalarProperty Name="Price" ColumnName="Price" />
                 <ScalarProperty Name="DateListed" ColumnName="DateListed" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ProductOrder">
-            <EntityTypeMapping TypeName="EntitiesModel.ProductOrder">
-              <MappingFragment StoreEntitySet="ProductOrder">
-                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
-                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
                 <ScalarProperty Name="Quantity" ColumnName="Quantity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="ProductOrder">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.ProductOrder">
+              <MappingFragment StoreEntitySet="ProductOrder">
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="WarrantyExpiry" ColumnName="WarrantyExpiry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="Rating">
-            <EntityTypeMapping TypeName="EntitiesModel.Rating">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Rating">
               <MappingFragment StoreEntitySet="Rating">
                 <ScalarProperty Name="AccountID" ColumnName="AccountID" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
@@ -997,7 +942,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Role">
-            <EntityTypeMapping TypeName="EntitiesModel.Role">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Role">
               <MappingFragment StoreEntitySet="Role">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1005,7 +950,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Town">
-            <EntityTypeMapping TypeName="EntitiesModel.Town">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.Town">
               <MappingFragment StoreEntitySet="Town">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1014,7 +959,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="User">
-            <EntityTypeMapping TypeName="EntitiesModel.User">
+            <EntityTypeMapping TypeName="DSA_AssignmentModel.User">
               <MappingFragment StoreEntitySet="User">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1028,7 +973,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="UserRole" TypeName="EntitiesModel.UserRole" StoreEntitySet="UserRole">
+          <AssociationSetMapping Name="UserRole" TypeName="DSA_AssignmentModel.UserRole" StoreEntitySet="UserRole">
             <EndProperty Name="Account">
               <ScalarProperty Name="ID" ColumnName="AccountID" />
             </EndProperty>
@@ -1057,102 +1002,94 @@
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
       <Diagram Name="Entities">
-        <EntityTypeShape EntityType="EntitiesModel.Account" Width="1.5" PointX="3" PointY="9.5" Height="2.7494921874999996" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.Category" Width="1.5" PointX="0.75" PointY="6" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.Comment" Width="1.5" PointX="5.25" PointY="5.75" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.Country" Width="1.5" PointX="3.75" PointY="15" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.Fault" Width="1.5" PointX="8.25" PointY="5.625" Height="2.5571907552083317" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.FaultLog" Width="1.5" PointX="10.5" PointY="5.625" Height="2.3648893229166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.FaultStatus" Width="1.5" PointX="8.25" PointY="3" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.Order" Width="1.5" PointX="3" PointY="1.75" Height="2.1725878906249996" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.OrderStatus" Width="1.5" PointX="0.75" PointY="2" Height="1.5956835937499996" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.Product" Width="1.5" PointX="3" PointY="5.125" Height="3.3263964843750005" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.ProductOrder" Width="1.5" PointX="5.25" PointY="2.875" Height="1.9802864583333353" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.Rating" Width="1.5" PointX="5.25" PointY="8.875" Height="1.9802864583333317" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.Role" Width="1.5" PointX="5.25" PointY="12" Height="1.5956835937500031" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.Town" Width="1.5" PointX="6" PointY="14.875" Height="1.9802864583333406" IsExpanded="true" />
-        <EntityTypeShape EntityType="EntitiesModel.User" Width="1.5" PointX="8.25" PointY="9.25" Height="3.1340950520833388" IsExpanded="true" />
-        <AssociationConnector Association="EntitiesModel.FK_Comment_Account" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="9.508075923076925" />
-          <ConnectorPoint PointX="4.90625" PointY="9.101825923076925" />
-          <ConnectorPoint PointX="4.90625" PointY="6.8362939453125" />
-          <ConnectorPoint PointX="5.25" PointY="6.8362939453125" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Account" Width="1.5" PointX="3" PointY="9.625" Height="2.7494921874999996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Category" Width="1.5" PointX="0.75" PointY="6.125" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Comment" Width="1.5" PointX="5.25" PointY="5.875" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Country" Width="1.5" PointX="3.75" PointY="15.125" Height="1.5956835937500014" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Fault" Width="1.5" PointX="8.25" PointY="5.625" Height="2.5571907552083317" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.FaultLog" Width="1.5" PointX="10.5" PointY="5.875" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Order" Width="1.5" PointX="3" PointY="1.875" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.OrderStatus" Width="1.5" PointX="0.75" PointY="2.125" Height="1.5956835937499996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Product" Width="1.5" PointX="3" PointY="5.25" Height="3.5186979166666683" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.ProductOrder" Width="1.5" PointX="5.25" PointY="2.875" Height="2.1725878906249996" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Rating" Width="1.5" PointX="5.25" PointY="9" Height="1.9802864583333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Role" Width="1.5" PointX="5.25" PointY="12.125" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.Town" Width="1.5" PointX="6" PointY="15" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="DSA_AssignmentModel.User" Width="1.5" PointX="8.25" PointY="9.375" Height="3.1340950520833388" IsExpanded="true" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_Comment_Account" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="9.633075923076925" />
+          <ConnectorPoint PointX="4.90625" PointY="9.226825923076925" />
+          <ConnectorPoint PointX="4.90625" PointY="6.9612939453125" />
+          <ConnectorPoint PointX="5.25" PointY="6.9612939453125" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_Fault_Account" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="9.5265374615384619" />
-          <ConnectorPoint PointX="5.125" PointY="8.9015374615384619" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_Fault_Account" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="9.6515374615384619" />
+          <ConnectorPoint PointX="5.125" PointY="9.0265374615384619" />
           <ConnectorPoint PointX="5.125" PointY="8.5571907552083317" />
           <ConnectorPoint PointX="7.875" PointY="8.5571907552083317" />
           <ConnectorPoint PointX="8.25" PointY="8.1821907552083317" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_Rating_Account" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="10.222164459935897" />
-          <ConnectorPoint PointX="5.25" PointY="10.222164459935897" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_Rating_Account" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="10.347164459935899" />
+          <ConnectorPoint PointX="5.25" PointY="10.347164459935899" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_User_Account" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="11.427643229166666" />
-          <ConnectorPoint PointX="8.25" PointY="11.427643229166666" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_User_Account" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="11.552643229166668" />
+          <ConnectorPoint PointX="8.25" PointY="11.552643229166668" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_Product_Category" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="6.797841796875" />
-          <ConnectorPoint PointX="3" PointY="6.797841796875" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_Product_Category" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="6.922841796875" />
+          <ConnectorPoint PointX="3" PointY="6.922841796875" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_Comment_Product" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="6.23064697265625" />
-          <ConnectorPoint PointX="5.25" PointY="6.23064697265625" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_Comment_Product" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="6.35564697265625" />
+          <ConnectorPoint PointX="5.25" PointY="6.35564697265625" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_Town_Country" ManuallyRouted="false">
-          <ConnectorPoint PointX="5.25" PointY="15.797841796875" />
-          <ConnectorPoint PointX="6" PointY="15.797841796875" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_Town_Country" ManuallyRouted="false">
+          <ConnectorPoint PointX="5.25" PointY="15.922841796875002" />
+          <ConnectorPoint PointX="6" PointY="15.922841796875002" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_Fault_Product" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="8.0523868229166649" />
-          <ConnectorPoint PointX="4.822916666666667" PointY="8.0523868229166649" />
-          <ConnectorPoint PointX="4.989583333333333" PointY="8.0523868229166649" />
-          <ConnectorPoint PointX="8.25" PointY="8.0523868229166649" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_Fault_Product" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="5.71875" />
+          <ConnectorPoint PointX="8.25" PointY="5.71875" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_FaultLog_Fault" ManuallyRouted="false">
-          <ConnectorPoint PointX="9.75" PointY="6.8074446614583337" />
-          <ConnectorPoint PointX="10.5" PointY="6.8074446614583337" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_FaultLog_Fault" ManuallyRouted="false">
+          <ConnectorPoint PointX="9.75" PointY="6.9612939453125" />
+          <ConnectorPoint PointX="10.5" PointY="6.9612939453125" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_FaultLog_FaultStatus" ManuallyRouted="false">
-          <ConnectorPoint PointX="9.75" PointY="3.797841796875" />
-          <ConnectorPoint PointX="11.25" PointY="3.797841796875" />
-          <ConnectorPoint PointX="11.25" PointY="5.625" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_Order_OrderStatus" ManuallyRouted="false">
+          <ConnectorPoint PointX="2.25" PointY="2.922841796875" />
+          <ConnectorPoint PointX="3" PointY="2.922841796875" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_Order_OrderStatus" ManuallyRouted="false">
-          <ConnectorPoint PointX="2.25" PointY="2.797841796875" />
-          <ConnectorPoint PointX="3" PointY="2.797841796875" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_ProductOrder_Order" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="3.4612939453125" />
+          <ConnectorPoint PointX="5.25" PointY="3.4612939453125" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_ProductOrder_Order" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="3.3987939453125" />
-          <ConnectorPoint PointX="5.25" PointY="3.3987939453125" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_ProductOrder_Product" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5" PointY="5.25" />
+          <ConnectorPoint PointX="4.875" PointY="4.875" />
+          <ConnectorPoint PointX="4.875" PointY="5.422587890625" />
+          <ConnectorPoint PointX="5.25" PointY="5.047587890625" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_ProductOrder_Product" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5" PointY="5.125" />
-          <ConnectorPoint PointX="4.875" PointY="4.75" />
-          <ConnectorPoint PointX="4.875" PointY="5.2302864583333353" />
-          <ConnectorPoint PointX="5.25" PointY="4.8552864583333353" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_Rating_Product" ManuallyRouted="false">
+          <ConnectorPoint PointX="4.5000000000000009" PointY="8.7686979166666674" />
+          <ConnectorPoint PointX="4.75" PointY="9.0186979166666674" />
+          <ConnectorPoint PointX="4.75" PointY="8.4988471538461532" />
+          <ConnectorPoint PointX="4.8473244349011217" PointY="8.5961715887472732" />
+          <ConnectorPoint PointX="4.9651755650988791" PointY="8.7140227189450314" />
+          <ConnectorPoint PointX="5.0660744349011217" PointY="8.8149215887472732" />
+          <ConnectorPoint PointX="5.1839255650988791" PointY="8.9327727189450314" />
+          <ConnectorPoint PointX="5.2511528461538459" PointY="9" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_Rating_Product" ManuallyRouted="false">
-          <ConnectorPoint PointX="4.5000000000000009" PointY="8.451396484375" />
-          <ConnectorPoint PointX="4.75" PointY="8.701396484375" />
-          <ConnectorPoint PointX="4.75" PointY="8.3738471538461532" />
-          <ConnectorPoint PointX="4.8473244349011217" PointY="8.4711715887472732" />
-          <ConnectorPoint PointX="4.9651755650988791" PointY="8.5890227189450314" />
-          <ConnectorPoint PointX="5.0660744349011217" PointY="8.6899215887472732" />
-          <ConnectorPoint PointX="5.1839255650988791" PointY="8.8077727189450314" />
-          <ConnectorPoint PointX="5.2511528461538459" PointY="8.875" />
+        <AssociationConnector Association="DSA_AssignmentModel.FK_User_Town" ManuallyRouted="false">
+          <ConnectorPoint PointX="7.15625" PointY="15" />
+          <ConnectorPoint PointX="7.15625" PointY="11.838824114583328" />
+          <ConnectorPoint PointX="8.25" PointY="11.838824114583328" />
         </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.FK_User_Town" ManuallyRouted="false">
-          <ConnectorPoint PointX="7.15625" PointY="14.875" />
-          <ConnectorPoint PointX="7.15625" PointY="11.713824114583327" />
-          <ConnectorPoint PointX="8.25" PointY="11.713824114583327" />
-        </AssociationConnector>
-        <AssociationConnector Association="EntitiesModel.UserRole" ManuallyRouted="false">
-          <ConnectorPoint PointX="3.75" PointY="12.2494921875" />
-          <ConnectorPoint PointX="3.75" PointY="12.922588390625002" />
-          <ConnectorPoint PointX="5.25" PointY="12.922588390625002" />
+        <AssociationConnector Association="DSA_AssignmentModel.UserRole" ManuallyRouted="false">
+          <ConnectorPoint PointX="3.75" PointY="12.3744921875" />
+          <ConnectorPoint PointX="3.75" PointY="13.047588390625002" />
+          <ConnectorPoint PointX="5.25" PointY="13.047588390625002" />
         </AssociationConnector>
       </Diagram>
     </Diagrams>

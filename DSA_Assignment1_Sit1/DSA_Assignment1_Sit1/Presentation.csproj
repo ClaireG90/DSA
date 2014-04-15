@@ -64,17 +64,39 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\GenerateFaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\ShoppingCartController.cs" />
+    <Compile Include="Controllers\UpdateFaultStatusController.cs" />
     <Compile Include="Controllers\ViewAllProductController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CommentModel.cs" />
+    <Compile Include="Models\GenerateFaultModel.cs" />
     <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\RegistrationModel.cs" />
+    <Compile Include="Models\ShoppingCartModel.cs" />
+    <Compile Include="Models\UpdateFaultStatusModel.cs" />
     <Compile Include="Models\ViewAllProductModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BarcodeServ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\FaultServ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\OrderServ\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ProductCommentServ\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -132,10 +154,48 @@
     <Content Include="Scripts\modernizr-1.7.min.js" />
     <None Include="Properties\DataSources\Common.Account.datasource" />
     <None Include="Properties\DataSources\Common.Comment.datasource" />
+    <None Include="Properties\DataSources\Common.Fault.datasource" />
+    <None Include="Properties\DataSources\Common.FaultLog.datasource" />
+    <None Include="Properties\DataSources\Common.Order.datasource" />
+    <None Include="Properties\DataSources\Common.OrderStatus.datasource" />
     <None Include="Properties\DataSources\Common.Product.datasource" />
+    <None Include="Properties\DataSources\Common.ProductOrder.datasource" />
     <None Include="Properties\DataSources\Common.Role.datasource" />
     <None Include="Properties\DataSources\Common.Town.datasource" />
     <None Include="Properties\DataSources\Common.User.datasource" />
+    <None Include="Service References\BarcodeServ\genericbarcode.wsdl" />
+    <None Include="Service References\FaultServ\Fault.wsdl" />
+    <None Include="Service References\FaultServ\Fault.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FaultServ\Fault1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FaultServ\Fault2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FaultServ\Fault3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\FaultServ\Fault4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderServ\Order.wsdl" />
+    <None Include="Service References\OrderServ\Order.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderServ\Order1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderServ\Order2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderServ\Order3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\OrderServ\Order4.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ProductCommentServ\ProductComment.wsdl" />
     <None Include="Service References\ProductCommentServ\ProductComment.xsd">
       <SubType>Designer</SubType>
@@ -189,7 +249,29 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-    <Content Include="Web.config" />
+    <None Include="Service References\OrderServ\Order.disco" />
+    <None Include="Service References\OrderServ\configuration91.svcinfo" />
+    <None Include="Service References\OrderServ\configuration.svcinfo" />
+    <None Include="Service References\OrderServ\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\FaultServ\Fault.disco" />
+    <None Include="Service References\FaultServ\configuration91.svcinfo" />
+    <None Include="Service References\FaultServ\configuration.svcinfo" />
+    <None Include="Service References\FaultServ\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\BarcodeServ\configuration91.svcinfo" />
+    <None Include="Service References\BarcodeServ\configuration.svcinfo" />
+    <None Include="Service References\BarcodeServ\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -242,6 +324,15 @@
     <Content Include="Views\ViewAllProduct\Index.cshtml" />
     <Content Include="Views\ViewAllProduct\Details.cshtml" />
     <Content Include="Views\ViewAllProduct\_comments.cshtml" />
+    <Content Include="Views\ShoppingCart\Index.cshtml" />
+    <Content Include="Views\ShoppingCart\PurchaseHistory.cshtml" />
+    <Content Include="Views\ShoppingCart\_productDetails.cshtml" />
+    <Content Include="Views\ShoppingCart\PostComment.cshtml" />
+    <Content Include="Views\GenerateFault\Index.cshtml" />
+    <Content Include="Views\GenerateFault\ReportFault.cshtml" />
+    <Content Include="Views\UpdateFaultStatus\Index.cshtml" />
+    <Content Include="Views\UpdateFaultStatus\Search.cshtml" />
+    <Content Include="Views\UpdateFaultStatus\Update.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -272,6 +363,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BarcodeServ\" />
+    <WCFMetadataStorage Include="Service References\FaultServ\" />
+    <WCFMetadataStorage Include="Service References\OrderServ\" />
     <WCFMetadataStorage Include="Service References\ProductCommentServ\" />
     <WCFMetadataStorage Include="Service References\ProductServ\" />
     <WCFMetadataStorage Include="Service References\UserAccountServ\" />

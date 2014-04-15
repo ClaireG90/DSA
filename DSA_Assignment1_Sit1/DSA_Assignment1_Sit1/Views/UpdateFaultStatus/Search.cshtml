@@ -1,0 +1,15 @@
+﻿<table>
+    <tr>
+        <td>
+            @Html.Label("Search by: ")
+        </td>
+        <td>
+            @Html.DropDownList("ddlSearchBy", new List<SelectListItem>
+            {
+                new SelectListItem{Text = "Username", Value = "1"},
+                new SelectListItem{Text = "TicketNumber", Value = "2"}, 
+                new SelectListItem{Text = "Date from - Date to", Value = "3"}
+            });
+        </td>
+    </tr>
+</table>

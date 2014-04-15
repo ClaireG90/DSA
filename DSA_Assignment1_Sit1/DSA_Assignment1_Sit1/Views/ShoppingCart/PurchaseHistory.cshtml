@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Common.ProductOrder>
+
+@{
+    ViewBag.Title = "PurchaseHistory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Purchase History</h2>
+
+<table>
+    <tr>
+        <th>Date of Purchase</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price per Item</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Order.DateOfOrder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => (item.Product.Price))
+        </td>
+        <td>
+            @Html.HiddenFor(modelItem => (item.ProductID))
+
+            @Html.ActionLink("Post Comment", "PostComment", new {pID = item.ProductID})
+        </td>
+        <td>
+            @Ajax.ActionLink("View Details", "ProductDetails", new { pID = item.ProductID, oID = item.OrderID }, new AjaxOptions
+       {
+           HttpMethod = "Get",
+           UpdateTargetId = "divDetails",
+           InsertionMode = InsertionMode.Replace
+       })
+        </td>
+        
+    </tr>
+}
+
+</table>
+<br />
+<br/>
+<fieldset>
+    <div id="divDetails">
+    </div>
+</fieldset>
+
+<fieldset>
+    <div id="divComment">
+    </div>
+</fieldset>

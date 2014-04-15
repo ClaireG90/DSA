@@ -19,22 +19,21 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_Comment_Account", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Account), "Comment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Comment), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_Fault_Account", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Account), "Fault", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Fault), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_Rating_Account", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Account), "Rating", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Rating), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_User_Account", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Account), "User", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.User), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_Product_Category", "Category", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Category), "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Product), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_Comment_Product", "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Product), "Comment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Comment), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_Town_Country", "Country", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Country), "Town", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Town), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_Fault_Product", "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Product), "Fault", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Fault), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_FaultLog_Fault", "Fault", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Fault), "FaultLog", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.FaultLog), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_FaultLog_FaultStatus", "FaultStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.FaultStatus), "FaultLog", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.FaultLog), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_Order_OrderStatus", "OrderStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.OrderStatus), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Order), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_ProductOrder_Order", "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Order), "ProductOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.ProductOrder), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_ProductOrder_Product", "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Product), "ProductOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.ProductOrder), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_Rating_Product", "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Product), "Rating", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Rating), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "FK_User_Town", "Town", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Town), "User", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.User), true)]
-[assembly: EdmRelationshipAttribute("EntitiesModel", "UserRole", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Account), "Role", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Role))]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_Comment_Account", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Account), "Comment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Comment), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_Fault_Account", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Account), "Fault", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Fault), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_Rating_Account", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Account), "Rating", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Rating), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_User_Account", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Account), "User", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.User), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_Product_Category", "Category", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Category), "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Product), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_Comment_Product", "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Product), "Comment", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Comment), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_Town_Country", "Country", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Country), "Town", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Town), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_Fault_Product", "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Product), "Fault", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Fault), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_FaultLog_Fault", "Fault", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Fault), "FaultLog", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.FaultLog), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_Order_OrderStatus", "OrderStatus", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.OrderStatus), "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Order), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_ProductOrder_Order", "Order", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Order), "ProductOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.ProductOrder), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_ProductOrder_Product", "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Product), "ProductOrder", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.ProductOrder), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_Rating_Product", "Product", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Product), "Rating", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Rating), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "FK_User_Town", "Town", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Common.Town), "User", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.User), true)]
+[assembly: EdmRelationshipAttribute("DSA_AssignmentModel", "UserRole", "Account", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Account), "Role", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Common.Role))]
 
 #endregion
 
@@ -181,22 +180,6 @@ namespace Common
             }
         }
         private ObjectSet<FaultLog> _FaultLog;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<FaultStatus> FaultStatus
-        {
-            get
-            {
-                if ((_FaultStatus == null))
-                {
-                    _FaultStatus = base.CreateObjectSet<FaultStatus>("FaultStatus");
-                }
-                return _FaultStatus;
-            }
-        }
-        private ObjectSet<FaultStatus> _FaultStatus;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -379,14 +362,6 @@ namespace Common
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the FaultStatus EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToFaultStatus(FaultStatus faultStatus)
-        {
-            base.AddObject("FaultStatus", faultStatus);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the Order EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToOrder(Order order)
@@ -461,7 +436,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Account")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Account")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Account : EntityObject
@@ -599,18 +574,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Comment_Account", "Comment")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Comment_Account", "Comment")]
         public EntityCollection<Comment> Comment
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Comment>("EntitiesModel.FK_Comment_Account", "Comment");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Comment>("DSA_AssignmentModel.FK_Comment_Account", "Comment");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Comment>("EntitiesModel.FK_Comment_Account", "Comment", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Comment>("DSA_AssignmentModel.FK_Comment_Account", "Comment", value);
                 }
             }
         }
@@ -621,18 +596,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Fault_Account", "Fault")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Fault_Account", "Fault")]
         public EntityCollection<Fault> Fault
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Fault>("EntitiesModel.FK_Fault_Account", "Fault");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Fault>("DSA_AssignmentModel.FK_Fault_Account", "Fault");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Fault>("EntitiesModel.FK_Fault_Account", "Fault", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Fault>("DSA_AssignmentModel.FK_Fault_Account", "Fault", value);
                 }
             }
         }
@@ -643,18 +618,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Rating_Account", "Rating")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Rating_Account", "Rating")]
         public EntityCollection<Rating> Rating
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rating>("EntitiesModel.FK_Rating_Account", "Rating");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rating>("DSA_AssignmentModel.FK_Rating_Account", "Rating");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rating>("EntitiesModel.FK_Rating_Account", "Rating", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rating>("DSA_AssignmentModel.FK_Rating_Account", "Rating", value);
                 }
             }
         }
@@ -665,18 +640,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_User_Account", "User")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_User_Account", "User")]
         public EntityCollection<User> User
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User>("EntitiesModel.FK_User_Account", "User");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User>("DSA_AssignmentModel.FK_User_Account", "User");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User>("EntitiesModel.FK_User_Account", "User", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User>("DSA_AssignmentModel.FK_User_Account", "User", value);
                 }
             }
         }
@@ -687,18 +662,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "UserRole", "Role")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "UserRole", "Role")]
         public EntityCollection<Role> Role
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Role>("EntitiesModel.UserRole", "Role");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Role>("DSA_AssignmentModel.UserRole", "Role");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Role>("EntitiesModel.UserRole", "Role", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Role>("DSA_AssignmentModel.UserRole", "Role", value);
                 }
             }
         }
@@ -710,7 +685,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Category")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Category")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Category : EntityObject
@@ -796,18 +771,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Product_Category", "Product")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Product_Category", "Product")]
         public EntityCollection<Product> Product
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Product>("EntitiesModel.FK_Product_Category", "Product");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Product>("DSA_AssignmentModel.FK_Product_Category", "Product");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Product>("EntitiesModel.FK_Product_Category", "Product", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Product>("DSA_AssignmentModel.FK_Product_Category", "Product", value);
                 }
             }
         }
@@ -819,7 +794,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Comment")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Comment")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Comment : EntityObject
@@ -957,16 +932,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Comment_Account", "Account")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Comment_Account", "Account")]
         public Account Account
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_Comment_Account", "Account").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_Comment_Account", "Account").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_Comment_Account", "Account").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_Comment_Account", "Account").Value = value;
             }
         }
         /// <summary>
@@ -978,13 +953,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_Comment_Account", "Account");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_Comment_Account", "Account");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Account>("EntitiesModel.FK_Comment_Account", "Account", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Account>("DSA_AssignmentModel.FK_Comment_Account", "Account", value);
                 }
             }
         }
@@ -995,16 +970,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Comment_Product", "Product")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Comment_Product", "Product")]
         public Product Product
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_Comment_Product", "Product").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_Comment_Product", "Product").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_Comment_Product", "Product").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_Comment_Product", "Product").Value = value;
             }
         }
         /// <summary>
@@ -1016,13 +991,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_Comment_Product", "Product");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_Comment_Product", "Product");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Product>("EntitiesModel.FK_Comment_Product", "Product", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Product>("DSA_AssignmentModel.FK_Comment_Product", "Product", value);
                 }
             }
         }
@@ -1034,7 +1009,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Country")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Country")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Country : EntityObject
@@ -1120,18 +1095,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Town_Country", "Town")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Town_Country", "Town")]
         public EntityCollection<Town> Town
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Town>("EntitiesModel.FK_Town_Country", "Town");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Town>("DSA_AssignmentModel.FK_Town_Country", "Town");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Town>("EntitiesModel.FK_Town_Country", "Town", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Town>("DSA_AssignmentModel.FK_Town_Country", "Town", value);
                 }
             }
         }
@@ -1143,7 +1118,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Fault")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Fault")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Fault : EntityObject
@@ -1158,7 +1133,7 @@ namespace Common
         /// <param name="productID">Initial value of the ProductID property.</param>
         /// <param name="accountID">Initial value of the AccountID property.</param>
         /// <param name="barcode">Initial value of the Barcode property.</param>
-        public static Fault CreateFault(global::System.Int32 id, global::System.Int32 ticketNumber, global::System.Int32 productID, global::System.Int32 accountID, global::System.Int32 barcode)
+        public static Fault CreateFault(global::System.Int32 id, global::System.Int32 ticketNumber, global::System.Int32 productID, global::System.Int32 accountID, global::System.Byte[] barcode)
         {
             Fault fault = new Fault();
             fault.ID = id;
@@ -1277,23 +1252,23 @@ namespace Common
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 Barcode
+        public global::System.Byte[] Barcode
         {
             get
             {
-                return _Barcode;
+                return StructuralObject.GetValidValue(_Barcode);
             }
             set
             {
                 OnBarcodeChanging(value);
                 ReportPropertyChanging("Barcode");
-                _Barcode = StructuralObject.SetValidValue(value);
+                _Barcode = StructuralObject.SetValidValue(value, false);
                 ReportPropertyChanged("Barcode");
                 OnBarcodeChanged();
             }
         }
-        private global::System.Int32 _Barcode;
-        partial void OnBarcodeChanging(global::System.Int32 value);
+        private global::System.Byte[] _Barcode;
+        partial void OnBarcodeChanging(global::System.Byte[] value);
         partial void OnBarcodeChanged();
 
         #endregion
@@ -1307,16 +1282,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Fault_Account", "Account")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Fault_Account", "Account")]
         public Account Account
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_Fault_Account", "Account").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_Fault_Account", "Account").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_Fault_Account", "Account").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_Fault_Account", "Account").Value = value;
             }
         }
         /// <summary>
@@ -1328,13 +1303,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_Fault_Account", "Account");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_Fault_Account", "Account");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Account>("EntitiesModel.FK_Fault_Account", "Account", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Account>("DSA_AssignmentModel.FK_Fault_Account", "Account", value);
                 }
             }
         }
@@ -1345,16 +1320,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Fault_Product", "Product")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Fault_Product", "Product")]
         public Product Product
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_Fault_Product", "Product").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_Fault_Product", "Product").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_Fault_Product", "Product").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_Fault_Product", "Product").Value = value;
             }
         }
         /// <summary>
@@ -1366,13 +1341,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_Fault_Product", "Product");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_Fault_Product", "Product");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Product>("EntitiesModel.FK_Fault_Product", "Product", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Product>("DSA_AssignmentModel.FK_Fault_Product", "Product", value);
                 }
             }
         }
@@ -1383,18 +1358,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_FaultLog_Fault", "FaultLog")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_FaultLog_Fault", "FaultLog")]
         public EntityCollection<FaultLog> FaultLog
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FaultLog>("EntitiesModel.FK_FaultLog_Fault", "FaultLog");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FaultLog>("DSA_AssignmentModel.FK_FaultLog_Fault", "FaultLog");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FaultLog>("EntitiesModel.FK_FaultLog_Fault", "FaultLog", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FaultLog>("DSA_AssignmentModel.FK_FaultLog_Fault", "FaultLog", value);
                 }
             }
         }
@@ -1406,7 +1381,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="FaultLog")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="FaultLog")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class FaultLog : EntityObject
@@ -1418,17 +1393,17 @@ namespace Common
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
         /// <param name="faultID">Initial value of the FaultID property.</param>
-        /// <param name="statusID">Initial value of the StatusID property.</param>
         /// <param name="description">Initial value of the Description property.</param>
         /// <param name="dateOfReport">Initial value of the DateOfReport property.</param>
-        public static FaultLog CreateFaultLog(global::System.Int32 id, global::System.Int32 faultID, global::System.Int32 statusID, global::System.String description, global::System.DateTime dateOfReport)
+        /// <param name="status">Initial value of the Status property.</param>
+        public static FaultLog CreateFaultLog(global::System.Int32 id, global::System.Int32 faultID, global::System.String description, global::System.DateTime dateOfReport, global::System.String status)
         {
             FaultLog faultLog = new FaultLog();
             faultLog.ID = id;
             faultLog.FaultID = faultID;
-            faultLog.StatusID = statusID;
             faultLog.Description = description;
             faultLog.DateOfReport = dateOfReport;
+            faultLog.Status = status;
             return faultLog;
         }
 
@@ -1492,30 +1467,6 @@ namespace Common
         /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
-        public global::System.Int32 StatusID
-        {
-            get
-            {
-                return _StatusID;
-            }
-            set
-            {
-                OnStatusIDChanging(value);
-                ReportPropertyChanging("StatusID");
-                _StatusID = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("StatusID");
-                OnStatusIDChanged();
-            }
-        }
-        private global::System.Int32 _StatusID;
-        partial void OnStatusIDChanging(global::System.Int32 value);
-        partial void OnStatusIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
         public global::System.String Description
         {
             get
@@ -1558,6 +1509,30 @@ namespace Common
         private global::System.DateTime _DateOfReport;
         partial void OnDateOfReportChanging(global::System.DateTime value);
         partial void OnDateOfReportChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Status
+        {
+            get
+            {
+                return _Status;
+            }
+            set
+            {
+                OnStatusChanging(value);
+                ReportPropertyChanging("Status");
+                _Status = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Status");
+                OnStatusChanged();
+            }
+        }
+        private global::System.String _Status;
+        partial void OnStatusChanging(global::System.String value);
+        partial void OnStatusChanged();
 
         #endregion
 
@@ -1570,16 +1545,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_FaultLog_Fault", "Fault")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_FaultLog_Fault", "Fault")]
         public Fault Fault
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fault>("EntitiesModel.FK_FaultLog_Fault", "Fault").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fault>("DSA_AssignmentModel.FK_FaultLog_Fault", "Fault").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fault>("EntitiesModel.FK_FaultLog_Fault", "Fault").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fault>("DSA_AssignmentModel.FK_FaultLog_Fault", "Fault").Value = value;
             }
         }
         /// <summary>
@@ -1591,51 +1566,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fault>("EntitiesModel.FK_FaultLog_Fault", "Fault");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Fault>("DSA_AssignmentModel.FK_FaultLog_Fault", "Fault");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Fault>("EntitiesModel.FK_FaultLog_Fault", "Fault", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_FaultLog_FaultStatus", "FaultStatus")]
-        public FaultStatus FaultStatus
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FaultStatus>("EntitiesModel.FK_FaultLog_FaultStatus", "FaultStatus").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FaultStatus>("EntitiesModel.FK_FaultLog_FaultStatus", "FaultStatus").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<FaultStatus> FaultStatusReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<FaultStatus>("EntitiesModel.FK_FaultLog_FaultStatus", "FaultStatus");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<FaultStatus>("EntitiesModel.FK_FaultLog_FaultStatus", "FaultStatus", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Fault>("DSA_AssignmentModel.FK_FaultLog_Fault", "Fault", value);
                 }
             }
         }
@@ -1647,116 +1584,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="FaultStatus")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class FaultStatus : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new FaultStatus object.
-        /// </summary>
-        /// <param name="id">Initial value of the ID property.</param>
-        /// <param name="name">Initial value of the Name property.</param>
-        public static FaultStatus CreateFaultStatus(global::System.Int32 id, global::System.String name)
-        {
-            FaultStatus faultStatus = new FaultStatus();
-            faultStatus.ID = id;
-            faultStatus.Name = name;
-            return faultStatus;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 ID
-        {
-            get
-            {
-                return _ID;
-            }
-            set
-            {
-                if (_ID != value)
-                {
-                    OnIDChanging(value);
-                    ReportPropertyChanging("ID");
-                    _ID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("ID");
-                    OnIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _ID;
-        partial void OnIDChanging(global::System.Int32 value);
-        partial void OnIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Name
-        {
-            get
-            {
-                return _Name;
-            }
-            set
-            {
-                OnNameChanging(value);
-                ReportPropertyChanging("Name");
-                _Name = StructuralObject.SetValidValue(value, false);
-                ReportPropertyChanged("Name");
-                OnNameChanged();
-            }
-        }
-        private global::System.String _Name;
-        partial void OnNameChanging(global::System.String value);
-        partial void OnNameChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_FaultLog_FaultStatus", "FaultLog")]
-        public EntityCollection<FaultLog> FaultLog
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<FaultLog>("EntitiesModel.FK_FaultLog_FaultStatus", "FaultLog");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<FaultLog>("EntitiesModel.FK_FaultLog_FaultStatus", "FaultLog", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Order")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Order")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Order : EntityObject
@@ -1894,16 +1722,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Order_OrderStatus", "OrderStatus")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Order_OrderStatus", "OrderStatus")]
         public OrderStatus OrderStatus
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("EntitiesModel.FK_Order_OrderStatus", "OrderStatus").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("DSA_AssignmentModel.FK_Order_OrderStatus", "OrderStatus").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("EntitiesModel.FK_Order_OrderStatus", "OrderStatus").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("DSA_AssignmentModel.FK_Order_OrderStatus", "OrderStatus").Value = value;
             }
         }
         /// <summary>
@@ -1915,13 +1743,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("EntitiesModel.FK_Order_OrderStatus", "OrderStatus");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<OrderStatus>("DSA_AssignmentModel.FK_Order_OrderStatus", "OrderStatus");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrderStatus>("EntitiesModel.FK_Order_OrderStatus", "OrderStatus", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<OrderStatus>("DSA_AssignmentModel.FK_Order_OrderStatus", "OrderStatus", value);
                 }
             }
         }
@@ -1932,18 +1760,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_ProductOrder_Order", "ProductOrder")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_ProductOrder_Order", "ProductOrder")]
         public EntityCollection<ProductOrder> ProductOrder
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductOrder>("EntitiesModel.FK_ProductOrder_Order", "ProductOrder");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductOrder>("DSA_AssignmentModel.FK_ProductOrder_Order", "ProductOrder");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductOrder>("EntitiesModel.FK_ProductOrder_Order", "ProductOrder", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductOrder>("DSA_AssignmentModel.FK_ProductOrder_Order", "ProductOrder", value);
                 }
             }
         }
@@ -1955,7 +1783,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="OrderStatus")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="OrderStatus")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class OrderStatus : EntityObject
@@ -2041,18 +1869,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Order_OrderStatus", "Order")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Order_OrderStatus", "Order")]
         public EntityCollection<Order> Order
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("EntitiesModel.FK_Order_OrderStatus", "Order");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Order>("DSA_AssignmentModel.FK_Order_OrderStatus", "Order");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("EntitiesModel.FK_Order_OrderStatus", "Order", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Order>("DSA_AssignmentModel.FK_Order_OrderStatus", "Order", value);
                 }
             }
         }
@@ -2064,7 +1892,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Product")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Product")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Product : EntityObject
@@ -2306,16 +2134,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Product_Category", "Category")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Product_Category", "Category")]
         public Category Category
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("EntitiesModel.FK_Product_Category", "Category").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("DSA_AssignmentModel.FK_Product_Category", "Category").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("EntitiesModel.FK_Product_Category", "Category").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("DSA_AssignmentModel.FK_Product_Category", "Category").Value = value;
             }
         }
         /// <summary>
@@ -2327,13 +2155,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("EntitiesModel.FK_Product_Category", "Category");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Category>("DSA_AssignmentModel.FK_Product_Category", "Category");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("EntitiesModel.FK_Product_Category", "Category", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Category>("DSA_AssignmentModel.FK_Product_Category", "Category", value);
                 }
             }
         }
@@ -2344,18 +2172,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Comment_Product", "Comment")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Comment_Product", "Comment")]
         public EntityCollection<Comment> Comment
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Comment>("EntitiesModel.FK_Comment_Product", "Comment");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Comment>("DSA_AssignmentModel.FK_Comment_Product", "Comment");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Comment>("EntitiesModel.FK_Comment_Product", "Comment", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Comment>("DSA_AssignmentModel.FK_Comment_Product", "Comment", value);
                 }
             }
         }
@@ -2366,18 +2194,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Fault_Product", "Fault")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Fault_Product", "Fault")]
         public EntityCollection<Fault> Fault
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Fault>("EntitiesModel.FK_Fault_Product", "Fault");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Fault>("DSA_AssignmentModel.FK_Fault_Product", "Fault");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Fault>("EntitiesModel.FK_Fault_Product", "Fault", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Fault>("DSA_AssignmentModel.FK_Fault_Product", "Fault", value);
                 }
             }
         }
@@ -2388,18 +2216,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_ProductOrder_Product", "ProductOrder")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_ProductOrder_Product", "ProductOrder")]
         public EntityCollection<ProductOrder> ProductOrder
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductOrder>("EntitiesModel.FK_ProductOrder_Product", "ProductOrder");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<ProductOrder>("DSA_AssignmentModel.FK_ProductOrder_Product", "ProductOrder");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductOrder>("EntitiesModel.FK_ProductOrder_Product", "ProductOrder", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<ProductOrder>("DSA_AssignmentModel.FK_ProductOrder_Product", "ProductOrder", value);
                 }
             }
         }
@@ -2410,18 +2238,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Rating_Product", "Rating")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Rating_Product", "Rating")]
         public EntityCollection<Rating> Rating
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rating>("EntitiesModel.FK_Rating_Product", "Rating");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Rating>("DSA_AssignmentModel.FK_Rating_Product", "Rating");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rating>("EntitiesModel.FK_Rating_Product", "Rating", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Rating>("DSA_AssignmentModel.FK_Rating_Product", "Rating", value);
                 }
             }
         }
@@ -2433,7 +2261,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="ProductOrder")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="ProductOrder")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class ProductOrder : EntityObject
@@ -2446,12 +2274,14 @@ namespace Common
         /// <param name="productID">Initial value of the ProductID property.</param>
         /// <param name="orderID">Initial value of the OrderID property.</param>
         /// <param name="quantity">Initial value of the Quantity property.</param>
-        public static ProductOrder CreateProductOrder(global::System.Int32 productID, global::System.Int32 orderID, global::System.Int32 quantity)
+        /// <param name="warrantyExpiry">Initial value of the WarrantyExpiry property.</param>
+        public static ProductOrder CreateProductOrder(global::System.Int32 productID, global::System.Int32 orderID, global::System.Int32 quantity, global::System.DateTime warrantyExpiry)
         {
             ProductOrder productOrder = new ProductOrder();
             productOrder.ProductID = productID;
             productOrder.OrderID = orderID;
             productOrder.Quantity = quantity;
+            productOrder.WarrantyExpiry = warrantyExpiry;
             return productOrder;
         }
 
@@ -2536,6 +2366,30 @@ namespace Common
         private global::System.Int32 _Quantity;
         partial void OnQuantityChanging(global::System.Int32 value);
         partial void OnQuantityChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime WarrantyExpiry
+        {
+            get
+            {
+                return _WarrantyExpiry;
+            }
+            set
+            {
+                OnWarrantyExpiryChanging(value);
+                ReportPropertyChanging("WarrantyExpiry");
+                _WarrantyExpiry = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("WarrantyExpiry");
+                OnWarrantyExpiryChanged();
+            }
+        }
+        private global::System.DateTime _WarrantyExpiry;
+        partial void OnWarrantyExpiryChanging(global::System.DateTime value);
+        partial void OnWarrantyExpiryChanged();
 
         #endregion
 
@@ -2548,16 +2402,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_ProductOrder_Order", "Order")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_ProductOrder_Order", "Order")]
         public Order Order
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("EntitiesModel.FK_ProductOrder_Order", "Order").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("DSA_AssignmentModel.FK_ProductOrder_Order", "Order").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("EntitiesModel.FK_ProductOrder_Order", "Order").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("DSA_AssignmentModel.FK_ProductOrder_Order", "Order").Value = value;
             }
         }
         /// <summary>
@@ -2569,13 +2423,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("EntitiesModel.FK_ProductOrder_Order", "Order");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Order>("DSA_AssignmentModel.FK_ProductOrder_Order", "Order");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Order>("EntitiesModel.FK_ProductOrder_Order", "Order", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Order>("DSA_AssignmentModel.FK_ProductOrder_Order", "Order", value);
                 }
             }
         }
@@ -2586,16 +2440,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_ProductOrder_Product", "Product")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_ProductOrder_Product", "Product")]
         public Product Product
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_ProductOrder_Product", "Product").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_ProductOrder_Product", "Product").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_ProductOrder_Product", "Product").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_ProductOrder_Product", "Product").Value = value;
             }
         }
         /// <summary>
@@ -2607,13 +2461,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_ProductOrder_Product", "Product");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_ProductOrder_Product", "Product");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Product>("EntitiesModel.FK_ProductOrder_Product", "Product", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Product>("DSA_AssignmentModel.FK_ProductOrder_Product", "Product", value);
                 }
             }
         }
@@ -2625,7 +2479,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Rating")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Rating")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Rating : EntityObject
@@ -2740,16 +2594,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Rating_Account", "Account")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Rating_Account", "Account")]
         public Account Account
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_Rating_Account", "Account").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_Rating_Account", "Account").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_Rating_Account", "Account").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_Rating_Account", "Account").Value = value;
             }
         }
         /// <summary>
@@ -2761,13 +2615,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_Rating_Account", "Account");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_Rating_Account", "Account");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Account>("EntitiesModel.FK_Rating_Account", "Account", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Account>("DSA_AssignmentModel.FK_Rating_Account", "Account", value);
                 }
             }
         }
@@ -2778,16 +2632,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Rating_Product", "Product")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Rating_Product", "Product")]
         public Product Product
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_Rating_Product", "Product").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_Rating_Product", "Product").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_Rating_Product", "Product").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_Rating_Product", "Product").Value = value;
             }
         }
         /// <summary>
@@ -2799,13 +2653,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("EntitiesModel.FK_Rating_Product", "Product");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Product>("DSA_AssignmentModel.FK_Rating_Product", "Product");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Product>("EntitiesModel.FK_Rating_Product", "Product", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Product>("DSA_AssignmentModel.FK_Rating_Product", "Product", value);
                 }
             }
         }
@@ -2817,7 +2671,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Role")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Role")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Role : EntityObject
@@ -2903,18 +2757,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "UserRole", "Account")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "UserRole", "Account")]
         public EntityCollection<Account> Account
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Account>("EntitiesModel.UserRole", "Account");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Account>("DSA_AssignmentModel.UserRole", "Account");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Account>("EntitiesModel.UserRole", "Account", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Account>("DSA_AssignmentModel.UserRole", "Account", value);
                 }
             }
         }
@@ -2926,7 +2780,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="Town")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="Town")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Town : EntityObject
@@ -3038,16 +2892,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_Town_Country", "Country")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_Town_Country", "Country")]
         public Country Country
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Country>("EntitiesModel.FK_Town_Country", "Country").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Country>("DSA_AssignmentModel.FK_Town_Country", "Country").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Country>("EntitiesModel.FK_Town_Country", "Country").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Country>("DSA_AssignmentModel.FK_Town_Country", "Country").Value = value;
             }
         }
         /// <summary>
@@ -3059,13 +2913,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Country>("EntitiesModel.FK_Town_Country", "Country");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Country>("DSA_AssignmentModel.FK_Town_Country", "Country");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Country>("EntitiesModel.FK_Town_Country", "Country", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Country>("DSA_AssignmentModel.FK_Town_Country", "Country", value);
                 }
             }
         }
@@ -3076,18 +2930,18 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_User_Town", "User")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_User_Town", "User")]
         public EntityCollection<User> User
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User>("EntitiesModel.FK_User_Town", "User");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<User>("DSA_AssignmentModel.FK_User_Town", "User");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User>("EntitiesModel.FK_User_Town", "User", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<User>("DSA_AssignmentModel.FK_User_Town", "User", value);
                 }
             }
         }
@@ -3099,7 +2953,7 @@ namespace Common
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="EntitiesModel", Name="User")]
+    [EdmEntityTypeAttribute(NamespaceName="DSA_AssignmentModel", Name="User")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class User : EntityObject
@@ -3367,16 +3221,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_User_Account", "Account")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_User_Account", "Account")]
         public Account Account
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_User_Account", "Account").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_User_Account", "Account").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_User_Account", "Account").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_User_Account", "Account").Value = value;
             }
         }
         /// <summary>
@@ -3388,13 +3242,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("EntitiesModel.FK_User_Account", "Account");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Account>("DSA_AssignmentModel.FK_User_Account", "Account");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Account>("EntitiesModel.FK_User_Account", "Account", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Account>("DSA_AssignmentModel.FK_User_Account", "Account", value);
                 }
             }
         }
@@ -3405,16 +3259,16 @@ namespace Common
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("EntitiesModel", "FK_User_Town", "Town")]
+        [EdmRelationshipNavigationPropertyAttribute("DSA_AssignmentModel", "FK_User_Town", "Town")]
         public Town Town
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Town>("EntitiesModel.FK_User_Town", "Town").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Town>("DSA_AssignmentModel.FK_User_Town", "Town").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Town>("EntitiesModel.FK_User_Town", "Town").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Town>("DSA_AssignmentModel.FK_User_Town", "Town").Value = value;
             }
         }
         /// <summary>
@@ -3426,13 +3280,13 @@ namespace Common
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Town>("EntitiesModel.FK_User_Town", "Town");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Town>("DSA_AssignmentModel.FK_User_Town", "Town");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Town>("EntitiesModel.FK_User_Town", "Town", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Town>("DSA_AssignmentModel.FK_User_Town", "Town", value);
                 }
             }
         }

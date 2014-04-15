@@ -31,6 +31,11 @@ namespace DataAccess
             return entities.User.SingleOrDefault(u => u.Email == email);
         }
 
+        public User GetUserByAccountID(int aID)
+        {
+            return entities.User.SingleOrDefault(u => u.AccountID == aID);
+        }
+
         public void AddUser(User user)
         {
             entities.User.AddObject(user);

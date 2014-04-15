@@ -1,0 +1,49 @@
+﻿@model List<Common.FaultLog>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@Html.BeginForm("Search", "UpdateFaultStatus", FormMethod.Get)
+{
+    Enter username: 
+    @Html.TextBox("username")
+    <input type="submit" value = "search" />
+}
+
+<table>
+    <tr>
+        <th>
+            Status
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            DateOfReport
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfReport)
+        </td>
+        <td>
+            @Html.ActionLink("Update", "Update", new { faultID =item.FaultID })
+        </td>
+    </tr>
+}
+
+</table>
