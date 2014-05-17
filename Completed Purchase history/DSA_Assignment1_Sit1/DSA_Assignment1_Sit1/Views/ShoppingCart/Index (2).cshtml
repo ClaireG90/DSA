@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Common.ProductOrder>
+
+@{
+    ViewBag.Title = "My Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Shopping Cart</h2>
+
+<p>These are the items which are pending to be bought. Click here for your @Html.ActionLink("purchase history", "PurchaseHistory").</p>
+
+<p style="color:Red">@ViewBag.Error</p>
+<br />
+
+<table>
+    <tr>
+        <th>Image</th>
+        <th>Product Name</th>
+        <th>Quantity</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@item.Product.Image" alt = "Product Image" width = "200px" height = "150px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "Delete", new {item.ProductID})
+        </td>
+    </tr>
+}
+</table>
+
+@ViewBag.TotalPrice
+
+@using (Html.BeginForm("CheckOut", "ShoppingCart", FormMethod.Post))
+{
+<p>
+    <input type="submit" value="CheckOut" />
+</p>
+}

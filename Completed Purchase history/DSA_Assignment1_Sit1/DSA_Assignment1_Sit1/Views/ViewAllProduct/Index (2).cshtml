@@ -1,0 +1,73 @@
+﻿@model IEnumerable<Common.Product>
+
+@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>All Products</h2>
+
+<p style="color:Red">@ViewBag.Error</p>
+<br />
+@using (Html.BeginForm("Search", "ViewAllProduct", FormMethod.Get))
+{
+    @Html.Label("Search By Category")
+    @Html.TextBox("category") <br />
+    @Html.Label("Search By Name")
+    @Html.TextBox("name") <br />
+    @Html.Label("Search by price from")
+    @Html.TextBox("priceFrom")
+    @Html.Label("to price to")
+    @Html.TextBox("priceTo")
+
+    <input type="submit" value="Search" />
+}
+<br />
+@using (Html.BeginForm("HighestPriceFirst", "ViewAllProduct", FormMethod.Get))
+{
+    <input type = "submit" value = "Highest Price First" />
+}
+<br />
+@using (Html.BeginForm("LowestPriceFirst", "ViewAllProduct", FormMethod.Get))
+{
+    <input type = "submit" value = "Lowest Price First" />
+}
+<br />
+@using (Html.BeginForm("DateListed", "ViewAllProduct", FormMethod.Get))
+{
+    <input type = "submit" value = "Order by Date Listed" />
+}
+<br />
+<table>
+    <tr>
+        <th>
+            Image
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@item.Image" alt = "Product Image" width = "200px" height = "150px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = item.ID })
+        </td>
+    </tr>
+}
+
+</table>

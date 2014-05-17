@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Common.ProductOrder>
+
+@{
+    ViewBag.Title = "Purchase History";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Purchase History</h2>
+
+<p style="color:Red">@ViewBag.Error</p>
+
+@using (Html.BeginForm("FilterTransactions", "ShoppingCart", FormMethod.Get))
+{
+    @Html.Label("Date From")
+    @Html.TextBox("dateFrom")
+    @Html.Label("Date To")
+    @Html.TextBox("dateTo")
+
+    <input type="submit" value="Filter" />
+}
+
+<table>
+    <tr>
+        <th>Date of Purchase</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Price per Item</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @{var date = Convert.ToDateTime(item.Order.DateOfOrder).ToShortDateString();}
+            @Html.DisplayFor(modelItem => date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>eee
+        <td>
+            @Html.DisplayFor(modelItem => (item.Product.Price))
+        </td>
+        <td>
+            @Html.HiddenFor(modelItem => (item.ProductID))
+
+            @Html.ActionLink("Post Comment", "PostComment", new {pID = item.ProductID})
+        </td>
+        <td>
+            @Ajax.ActionLink("View Details", "ProductDetails", new { pID = item.ProductID, oID = item.OrderID }, new AjaxOptions
+            {
+               HttpMethod = "Get",
+               UpdateTargetId = "divDetails",
+               InsertionMode = InsertionMode.Replace
+            })
+        </td>
+        <td>
+            @Html.ActionLink("Show Report", "ShowReport", new {pID = item.ProductID, oID = item.Order.ID})
+        </td>
+        
+    </tr>
+}
+
+</table>
+<br />
+<br/>
+<fieldset>
+    <div id="divDetails">
+    </div>
+</fieldset>

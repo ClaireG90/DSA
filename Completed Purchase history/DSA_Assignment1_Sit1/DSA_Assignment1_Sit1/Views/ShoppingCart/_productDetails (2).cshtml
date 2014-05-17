@@ -1,0 +1,84 @@
+﻿@model Common.ProductOrder
+
+<table>
+
+        <tr>
+            <td>
+                <img src="@Model.Product.Image" alt = "Product Image" width = "300px" height = "250px" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.Product.Name)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Product.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.Product.Features)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Product.Features)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Amount Purchased</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.Quantity)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Date Purchased</strong>
+            </td>
+            <td>
+                @{var date = Convert.ToDateTime(Model.Order.DateOfOrder).ToShortDateString();}
+                @Html.DisplayFor(model => date)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Warranty Expiry</strong>
+            </td>
+            <td>
+                @{var date2 = Convert.ToDateTime(Model.WarrantyExpiry).ToShortDateString();}
+                @Html.DisplayFor(model => date2)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Fault Status</strong>
+            </td>
+            <td>
+            @{
+                List<Common.Fault> flist = new List<Common.Fault>();
+
+                string proID = @Html.DisplayFor(model => model.Product.ID).ToString();
+                string accID = @Html.DisplayFor(model => model.Order.AccountID).ToString();
+                
+                int productID = Convert.ToInt32(proID);
+                int accountID = Convert.ToInt32(accID);
+
+                flist = new DSA_Assignment1_Sit1.FaultServ.FaultClient().GetFaultsByAccountIDandProductID(accountID, productID).ToList();
+
+                string status = "";
+
+                foreach (Common.Fault f in flist)
+                {
+                    List<Common.FaultLog> flTemp = new DSA_Assignment1_Sit1.FaultServ.FaultClient().GetAllFaultLogsByFaultID(f.ID).ToList();
+                    foreach (Common.FaultLog fl in flTemp)
+                    {
+                        status = fl.Status;
+                    }
+                }
+
+                ViewBag.Status = status.ToString();
+            }
+            @ViewBag.Status
+            </td>
+        </tr>
+</table>

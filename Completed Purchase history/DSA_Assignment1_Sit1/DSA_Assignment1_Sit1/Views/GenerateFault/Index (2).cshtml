@@ -1,0 +1,54 @@
+﻿@model List<Common.ProductOrder>
+
+@{
+    ViewBag.Title = "Report Fault";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Report Fault</h2>
+
+<p style="color:Red">@ViewBag.Error</p>
+
+<table>
+    <tr>
+        <th>
+            Image
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Date Of Purchase
+        </th>
+        <th>
+            Warranty Expiry
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img src="@item.Product.Image" alt = "Product Image" width = "150px" height = "100px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @{var date = Convert.ToDateTime(item.Order.DateOfOrder).ToShortDateString();} 
+            @Html.DisplayFor(modelItem => date)
+        </td>
+        <td>
+            @{var date2 = Convert.ToDateTime(item.Order.DateOfOrder).ToShortDateString();} 
+            @Html.DisplayFor(modelItem => date2)
+        </td>
+        <td>
+            @Html.ActionLink("Report Fault", "ReportFault", new {pID = item.ProductID})
+        </td>
+        @*<td>
+            @Html.ActionLink("Show Reports", "ShowReportFaults", new {pID = item.ProductID})
+        </td>*@
+    </tr>
+}
+
+</table>

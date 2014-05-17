@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="UserAccount" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:12952/UserAccount.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:12952/UserAccount.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:12952/UserAccount.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Common" />
+      <xsd:import schemaLocation="http://localhost:12952/UserAccount.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Data.Objects.DataClasses" />
+      <xsd:import schemaLocation="http://localhost:12952/UserAccount.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost:12952/UserAccount.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IUserAccount_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetUserByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByID" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetUserByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAccountByUsername_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountByUsername" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAccountByUsername_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountByUsernameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetUserByEmail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByEmail" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetUserByEmail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAllTowns_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTowns" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAllTowns_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllTownsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAllCountries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCountries" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAllCountries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllCountriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAllRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoles" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAllRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAllAccounts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAccounts" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAllAccounts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAccountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetUserByAccountID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByAccountID" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetUserByAccountID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByAccountIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetUserRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRoles" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetUserRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAccountByPIN_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountByPIN" />
+  </wsdl:message>
+  <wsdl:message name="IUserAccount_GetAccountByPIN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountByPINResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IUserAccount">
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/AddUser" message="tns:IUserAccount_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/AddUserResponse" message="tns:IUserAccount_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetUserByID" message="tns:IUserAccount_GetUserByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetUserByIDResponse" message="tns:IUserAccount_GetUserByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByUsername">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetAccountByUsername" message="tns:IUserAccount_GetAccountByUsername_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetAccountByUsernameResponse" message="tns:IUserAccount_GetAccountByUsername_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByEmail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetUserByEmail" message="tns:IUserAccount_GetUserByEmail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetUserByEmailResponse" message="tns:IUserAccount_GetUserByEmail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTowns">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetAllTowns" message="tns:IUserAccount_GetAllTowns_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetAllTownsResponse" message="tns:IUserAccount_GetAllTowns_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCountries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetAllCountries" message="tns:IUserAccount_GetAllCountries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetAllCountriesResponse" message="tns:IUserAccount_GetAllCountries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetAllRoles" message="tns:IUserAccount_GetAllRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetAllRolesResponse" message="tns:IUserAccount_GetAllRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAccounts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetAllAccounts" message="tns:IUserAccount_GetAllAccounts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetAllAccountsResponse" message="tns:IUserAccount_GetAllAccounts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByAccountID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetUserByAccountID" message="tns:IUserAccount_GetUserByAccountID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetUserByAccountIDResponse" message="tns:IUserAccount_GetUserByAccountID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRoles">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetUserRoles" message="tns:IUserAccount_GetUserRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetUserRolesResponse" message="tns:IUserAccount_GetUserRoles_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByPIN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUserAccount/GetAccountByPIN" message="tns:IUserAccount_GetAccountByPIN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUserAccount/GetAccountByPINResponse" message="tns:IUserAccount_GetAccountByPIN_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IUserAccount" type="tns:IUserAccount">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByID">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetUserByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByUsername">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetAccountByUsername" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByEmail">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetUserByEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllTowns">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetAllTowns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllCountries">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetAllCountries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoles">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetAllRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAccounts">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetAllAccounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByAccountID">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetUserByAccountID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRoles">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetUserRoles" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountByPIN">
+      <soap:operation soapAction="http://tempuri.org/IUserAccount/GetAccountByPIN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UserAccount">
+    <wsdl:port name="BasicHttpBinding_IUserAccount" binding="tns:BasicHttpBinding_IUserAccount">
+      <soap:address location="http://localhost:12952/UserAccount.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

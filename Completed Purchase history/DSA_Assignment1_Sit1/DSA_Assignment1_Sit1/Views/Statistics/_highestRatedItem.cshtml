@@ -1,0 +1,40 @@
+﻿@model Common.Product
+
+<fieldset>
+    <legend>Highest Rated Item</legend>
+
+    <div class="display-field">
+        <img src="@Url.Content(String.Format("~/{0}", Model.Image))" width="150px" height="100px"/>
+    </div>
+
+    <div class="display-label"><strong>Name</strong></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Name)
+    </div>
+
+    <div class="display-label"><strong>Features</strong></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Features)
+    </div>    
+
+    <div class="display-label"><strong>Price</strong></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Price)
+    </div>
+
+    <div class="display-label"><strong>Date Listed</strong></div>
+    <div class="display-field">
+        @{var date = Convert.ToDateTime(Model.DateListed).ToShortDateString();}
+        @Html.DisplayFor(model => date)
+    </div>
+
+    <div class="display-label"><strong>Quantity</strong></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Quantity)
+    </div>
+
+    <div class="display-label"><strong>Average Rating</strong></div>
+    <div class="display-field">
+        @ViewBag.Rating
+    </div>
+</fieldset>

@@ -1,0 +1,66 @@
+﻿@model DSA_Assignment1_Sit1.Models.PrintStatementModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Report</title>
+</head>
+<body>
+<br />
+    <table>
+            @{var date = Convert.ToDateTime(Model.dateFrom).ToShortDateString();}
+            @{var date2 = Convert.ToDateTime(Model.dateTo).ToShortDateString();}
+        <tr>
+            <td>Electros Ltd.</td>
+            <td></td>
+            <td>@Html.DisplayFor(model => date)</td>
+            <td>@Html.DisplayFor(model => date2)</td>
+        </tr>
+    </table>
+    <p>Item: </p>
+    <table border="1">
+        <tr>
+            <th><b>Item ID</b></th>
+            <th><b>Name</b></th>
+            <th><b>Price</b></th>
+            <th><b>Date Purchased</b></th>
+            <th><b>Warranty Expiry</b></th>
+        </tr>
+        @{var date3 = Convert.ToDateTime(Model.myOrder.DateOfOrder).ToShortDateString();}
+        @{var date4 = Convert.ToDateTime(Model.myProductOrder.WarrantyExpiry).ToShortDateString();}
+        <tr>
+            <td>@Html.DisplayFor(model => model.myProduct.ID)</td>
+            <td>@Html.DisplayFor(model => model.myProduct.Name)</td>
+            <td>@Html.DisplayFor(model => model.myProduct.Price)</td>
+            <td>@Html.DisplayFor(model => date3)</td>
+            <td>@Html.DisplayFor(model => date4)</td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <p>Faults: </p>
+    <table border="1">
+        <tr>
+            <th><b>Fault ID</b></th>
+            <th><b>Date</b></th>
+            <th><b>Fault Details</b></th>
+            <th><b>Status</b></th>
+        </tr>
+        @foreach (Common.FaultLog mod in Model.myFaultLog)
+        {
+            Common.FaultLog fl = @mod;
+            <tr>
+                <td>@mod.FaultID</td>
+                <td>@mod.DateOfReport</td>
+                <td>@mod.Description</td>
+                <td>@mod.Status</td>
+            </tr>
+        }    
+    </table>
+</body>
+</html>

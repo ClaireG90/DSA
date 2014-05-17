@@ -1,0 +1,107 @@
+﻿@model DSA_Assignment1_Sit1.Models.ViewAllProductModel
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<p style="color:Red">@ViewBag.Error</p>
+
+<fieldset>
+    <legend>@Html.DisplayFor(model => model.name)</legend>
+
+    <table>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <img src="@Model.myProduct.Image" alt = "Product Image" width = "300px" height = "250px" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.myProduct.Name)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.myProduct.Name)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.myProduct.Features)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.myProduct.Features)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.myProduct.Price)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.myProduct.Price)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.myProduct.Quantity)</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.myProduct.Quantity)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>@Html.LabelFor(model => model.myProduct.DateListed)</strong>
+            </td>
+            <td>
+                @{var date = Convert.ToDateTime(Model.myProduct.DateListed).ToShortDateString();} 
+                @Html.DisplayFor(model => date)
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <strong>Average Rating</strong>
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.rating)
+            </td>
+        </tr>
+        
+    </table>
+</fieldset>
+
+@Ajax.ActionLink("View Comments", "ProductComments", new { id = Model.myProduct.ID }, new AjaxOptions
+{
+    HttpMethod = "Get",
+
+    UpdateTargetId = "divComments",
+    InsertionMode = InsertionMode.InsertAfter
+})
+
+<fieldset>
+    <div id="divComments">
+        <legend>Comments</legend>
+    </div>
+</fieldset>
+
+
+@using (Html.BeginForm("Buy", "ViewAllProduct", FormMethod.Post))
+{
+    
+<p>
+    @Html.HiddenFor(model => model.myProduct.ID)
+    Quantity: 
+    @Html.TextBoxFor(model => model.quantity)
+</p>
+
+<p>
+    <input type="submit" value="Buy" />
+</p>
+}
+
+<p>
+    @Html.ActionLink("Back to Products", "Index")
+</p>
+
